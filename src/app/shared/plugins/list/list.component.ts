@@ -1,16 +1,17 @@
 import {
     Component, ContentChild, AfterViewInit, TemplateRef,
-    EventEmitter, Output
+    EventEmitter, Output, Input
 } from '@angular/core';
 
 @Component({
     selector: 'app-list',
     template: ` <ul class="list-group">
-                    <li class="list-group-item" *ngfor="let item in data">
+                    <li class="list-group-item" *ngFor="let item of data" (rowbinding)="rowBinding(item)" >
                       <ng-template *ngTemplateOutlet="itemTemplate; context: item"></ng-template>
                     </li>
                 </ul> 
-                <ngb-pagination 
+                <div class="pull right" style="margin-top:30px;">
+                <ngb-pagination
                   [(collectionSize)]="pageEvent.total"
                   [(pageSize)]="pageEvent.pageSize"
                   [(page)]="pageEvent.current" 
@@ -18,6 +19,7 @@ import {
                   [directionLinks]="true"
                   (pageChange)="pageChange(pageEvent)">
                 </ngb-pagination>
+                </div>
                 `
 })
 
@@ -30,26 +32,45 @@ export class ListComponent {
     itemTemplate: TemplateRef<any>;
 
     // 分页事件
-    pageEvent: PageEvent = {
+    @Input() pageEvent: PageEvent = {
         pageSize: 5,
         current: 0,
         total: 0
     };
 
+    @Input() IsUsePagination = true;
+
+    // 数据绑定请求
     @Output()
     bindSourceRequest: EventEmitter<ListComponent>;
 
-    pageChange(pageEvent) {
-        this.pageChange = pageEvent;
-        this.bindSourceRequest.emit(this);
-    }
+    rowDataBindingRequest: EventEmitter<any>;
 
     constructor() {
         this.bindSourceRequest = new EventEmitter();
+        this.rowDataBindingRequest = new EventEmitter();
+    }
+
+    // 分页事件触发
+    pageChange() {
+        this.bindSourceRequest.emit(this);
+    }
+
+    // 行绑定事件
+    rowBinding(item) {
+        this.data.length
+        if (this.rowDataBindingRequest) {
+            this.rowDataBindingRequest.emit(
+                {
+                    list: this,
+                    item: item
+                })
+        }
     }
 
 }
 
+// 分页接口
 export interface PageEvent {
     total: number;
     pageSize: number;

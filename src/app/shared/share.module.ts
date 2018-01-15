@@ -14,6 +14,7 @@ import { PopoverContent } from './plugins/popover/popover.content';
 import { TableComponent } from './plugins/table/table.component';
 import { ArticleComponent} from './plugins/article/article.component';
 import { SearchBoxComponent } from './plugins/search-box/search-box.component';
+import { ListComponent } from 'app/shared/plugins/list/list.component';
 
 //  module
 const MODULE = [CommonModule, DataTableModule, FormsModule, NgbPaginationModule]
@@ -30,7 +31,8 @@ const DE = [BypassSecurityTrustHtmlPipe,
     TableComponent,
     ColumnComponent,
     ArticleComponent,
-    SearchBoxComponent];
+    SearchBoxComponent,
+    ListComponent];
 
 @NgModule({
     imports: [...MODULE],

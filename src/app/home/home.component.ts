@@ -7,7 +7,9 @@ import 'rxjs/add/operator/debounceTime';
 import { CarouselModel, CarouselComponent } from '../shared/plugins/carousel/carousel.component';
 import { TableComponent } from '../shared/plugins/table/table.component';
 import { ArticleComponent } from '../shared/plugins/article/article.component'
+import { ListComponent } from '../shared/plugins/list/list.component';
 import { User } from '../users/shared/user.model';
+
 
 @Component({
   selector: 'app-home',
@@ -44,6 +46,7 @@ export class HomeComponent {
     ];
   }
 
+  //table数据绑定
   bindTable(table: TableComponent) {
     table.columnTitles = ['标题1', '标题2'];
     table.pageEvent.pageSize = 5;
@@ -70,5 +73,17 @@ export class HomeComponent {
 
   click(event: any, id: any) {
     alert(id);
+  }
+
+  // 列表数据绑定
+  bindList(list:ListComponent){
+    list.pageEvent.total=10;
+    list.data=[
+      { 'col1': 'data-2', 'col2': 'img1' },
+      { 'col1': 'data-2', 'col2': 'img1' },
+      { 'col1': 'data-2', 'col2': 'img1' },
+      { 'col1': 'data-2', 'col2': 'img1' },
+      { 'col1': 'data-2', 'col2': 'img1' },
+    ];
   }
 }
