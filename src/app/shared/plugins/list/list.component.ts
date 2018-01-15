@@ -10,7 +10,7 @@ import {
                       <ng-template *ngTemplateOutlet="itemTemplate; context: item"></ng-template>
                     </li>
                 </ul> 
-                <div class="pull right" style="margin-top:30px;">
+                <div class="row justify-content-center" style="margin-top:30px;">
                 <ngb-pagination
                   [(collectionSize)]="pageEvent.total"
                   [(pageSize)]="pageEvent.pageSize"
@@ -20,7 +20,16 @@ import {
                   (pageChange)="pageChange(pageEvent)">
                 </ngb-pagination>
                 </div>
-                `
+                `,
+    styles: [`
+    .list-group-item{
+        border-left:0px;
+        border-right:0px;
+    }
+    .list-group-item:hover{
+        background-color:#FFEBCD;
+    }
+    `]
 })
 
 export class ListComponent {
@@ -58,13 +67,12 @@ export class ListComponent {
 
     // 行绑定事件
     rowBinding(item) {
-        this.data.length
         if (this.rowDataBindingRequest) {
             this.rowDataBindingRequest.emit(
                 {
                     list: this,
                     item: item
-                })
+                });
         }
     }
 

@@ -41,11 +41,6 @@
     </section>
 
     <section style="position:relative" class="margin-bottom-30">
-      <!-- <div style="position:absolute; left:40%; top:40%; width:10%; height:10%; opacity:0.9  ">
-        <div style="position:relative;height:100%">
-          <ngx-loading [show]="true" [config]="{backdropBackgroundColour:'#7f000000',animationType:'threeBounce',backdropBorderRadius:'50%'}"></ngx-loading>
-        </div>
-      </div> -->
 
       <!-- table demo start -->
       <app-table #table [showCommandColumn]="true" (bindSourceRequest)="bindTable($event)">
@@ -100,38 +95,21 @@
 
     <section class="margin-bottom-30">
 
-      <a class="btn btn-primary" data-toggle="modal" href='#modal-id'>Trigger modal</a>
-      <div class="modal fade" id="modal-id">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-              <h4 class="modal-title">Modal title</h4>
-            </div>
-            <div class="modal-body">
-
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-        </div>
-      </div>
+        <button class="btn btn-primary" [modal]="modal">Trigger modal</button>
+        <app-modal #modal>
+            <!-- <router-outlet></router-outlet> -->
+        </app-modal>
 
     </section>
 
     <section class="margin-bottom-30">
+
       <app-list (bindSourceRequest)="bindList($event)" (pageEvent)="{pageSize:5}">
         <ng-template #itemTemplate let-name="col2">
           <a href="#">{{name}}</a>
         </ng-template>
       </app-list>
-      <!-- <ul class="list-group">
-        <li class="list-group-item active">item1</li>
-        <li class="list-group-item disabled">item2</li>
-        <li class="list-group-item">item3</li>
-      </ul> -->
+
     </section>
 
     <!-- <section>

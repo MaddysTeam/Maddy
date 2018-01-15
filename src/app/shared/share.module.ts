@@ -15,6 +15,8 @@ import { TableComponent } from './plugins/table/table.component';
 import { ArticleComponent} from './plugins/article/article.component';
 import { SearchBoxComponent } from './plugins/search-box/search-box.component';
 import { ListComponent } from 'app/shared/plugins/list/list.component';
+import { ModalComponent } from 'app/shared/plugins/modal/modal.component';
+import { ModalDirective } from 'app/shared/plugins/modal/modal.directive';
 
 //  module
 const MODULE = [CommonModule, DataTableModule, FormsModule, NgbPaginationModule]
@@ -32,7 +34,10 @@ const DE = [BypassSecurityTrustHtmlPipe,
     ColumnComponent,
     ArticleComponent,
     SearchBoxComponent,
-    ListComponent];
+    ListComponent,
+    ModalComponent,
+    ModalDirective
+  ];
 
 @NgModule({
     imports: [...MODULE],

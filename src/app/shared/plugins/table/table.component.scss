@@ -1,26 +1,30 @@
-.table-theme-chocolate {
-    &.table {
-        min-width:1000px;
-        text-align: center;
-        color: #5C3317; // border:1px solid #e9ecef;
-        thead th {
+.table {
+    min-width: 1000px;
+    text-align: center;
+    color: #5C3317; // border:1px solid #e9ecef;
+    thead th {
+        border: 1px solid #e9ecef;
+        font-size: 14px;
+    }
+    thead .table-checkbox-header {
+        width: 5%;
+    }
+    tbody {
+        tr {
             border: 1px solid #e9ecef;
-            font-size: 14px;
         }
-        thead .table-checkbox-header {
-            width: 5%;
+        tr:nth-of-type(odd) {
+            background-color: #EBEBEB;
+            font-size: 12px;
         }
-        tbody {
-            tr {
-                border: 1px solid #e9ecef;
-            }
-            tr:nth-of-type(odd) {
-                background-color: #EBEBEB;
-                font-size: 12px;
-            }
-            tr:hover {
-                background-color: #FFEBCD;
-            }
+        tr:hover {
+            background-color: #FFEBCD;
         }
     }
+}
+
+.table-page{
+    margin-top:30px;
+    padding-right:15px;
+    padding-left:15px;
 }
