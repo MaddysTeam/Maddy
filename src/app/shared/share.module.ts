@@ -12,28 +12,30 @@ import { CardComponent } from './plugins/card/card.component';
 import { PopoverDirective } from './plugins/popover/popover';
 import { PopoverContent } from './plugins/popover/popover.content';
 import { TableComponent } from './plugins/table/table.component';
-import { ArticleComponent} from './plugins/article/article.component'
+import { ArticleComponent} from './plugins/article/article.component';
+import { SearchBoxComponent } from './plugins/search-box/search-box.component';
+
+//  module
+const MODULE = [CommonModule, DataTableModule, FormsModule, NgbPaginationModule]
+
+//  声明(declarations) 导出(exports) 输入(entryComponents)
+const DEE = [];
+
+//  声明(declarations) 导出(exports)
+const DE = [BypassSecurityTrustHtmlPipe,
+    CardComponent,
+    CarouselComponent,
+    PopoverDirective,
+    PopoverContent,
+    TableComponent,
+    ColumnComponent,
+    ArticleComponent,
+    SearchBoxComponent];
 
 @NgModule({
-    imports: [CommonModule, DataTableModule, FormsModule, NgbPaginationModule],
-    declarations: [
-        BypassSecurityTrustHtmlPipe,
-        CardComponent,
-        CarouselComponent,
-        PopoverDirective,
-        PopoverContent,
-        TableComponent,
-        ColumnComponent,
-        ArticleComponent],
-    exports: [
-        BypassSecurityTrustHtmlPipe,
-        CardComponent,
-        CarouselComponent,
-        PopoverDirective,
-        PopoverContent,
-        TableComponent,
-        ColumnComponent,
-        ArticleComponent]
+    imports: [...MODULE],
+    declarations: [...DE],
+    exports: [...DE]
 })
 
 export class SharedModule { }
