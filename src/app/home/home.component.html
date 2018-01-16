@@ -95,24 +95,23 @@
 
     <section class="margin-bottom-30">
 
-      <div class="btn btn-primary" [modal]="modal">Trigger modal</div>
-      <div class="btn btn-primary" [modal]="modal2">Trigger modal3</div>
+      <div class="btn btn-primary" [modal]="modal">测试登录</div>
       <app-modal #modal modalId="modal1">
         <div class="modal-header">
+          <div>
+          用户登录
+          </div>
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title">弹出窗标题</h4>
         </div>
         <div class="modal-body">
-          这里可以是路由容器
+          <app-login></app-login>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-          <button type="button" class="btn btn-primary">这里是按钮</button>
-        </div>
+
       </app-modal>
 
     </section>
 
+    <!-- -->
     <section class="margin-bottom-30">
 
       <app-list (bindSourceRequest)="bindList($event)" (pageEvent)="{pageSize:5}">
@@ -124,18 +123,7 @@
     </section>
 
     <section>
-      <app-form></app-form>
-      <!-- <ul class="nav pills nav-stacked">
-        <li class="nav-item">
-          <a href="#" class="nav-link active">Active</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">Link</a>
-        </li>
-        <li class="nav-item disabled">
-          <a href="#" class="nav-link">Disabled</a>
-        </li>
-      </ul> -->
+     
     </section>
 
   </div>

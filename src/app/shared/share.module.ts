@@ -2,10 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { DataTableModule } from 'angular2-datatable';
 import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
-import { DynamicFormsCoreModule } from "@ng-dynamic-forms/core";
-import { DynamicFormsBootstrapUIModule } from "@ng-dynamic-forms/ui-bootstrap";
 
 import { ColumnComponent } from './plugins/table/table.column.component';
 import { BypassSecurityTrustHtmlPipe } from './pipes/trust-html-pipe';
@@ -19,18 +16,15 @@ import { SearchBoxComponent } from './plugins/search-box/search-box.component';
 import { ListComponent } from 'app/shared/plugins/list/list.component';
 import { ModalComponent } from 'app/shared/plugins/modal/modal.component';
 import { ModalDirective } from 'app/shared/plugins/modal/modal.directive';
-import { FormComponent } from 'app/shared/plugins/forms/form.component';
+import { LoginComponent } from 'app/shared/plugins/forms/login/login.component';
 
 //  module
 const MODULE = [
     CommonModule,
-    DataTableModule,
     FormsModule,
     NgbPaginationModule,
     ReactiveFormsModule,
-    DynamicFormsCoreModule.forRoot(),
-    DynamicFormsBootstrapUIModule,
-]
+];
 
 //  声明(declarations) 导出(exports) 输入(entryComponents)
 const DEE = [];
@@ -49,7 +43,7 @@ const DE = [
     ListComponent,
     ModalComponent,
     ModalDirective,
-    FormComponent
+    LoginComponent
 ];
 
 @NgModule({

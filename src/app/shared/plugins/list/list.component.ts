@@ -75,7 +75,7 @@ export class ListComponent {
                 });
         }
     }
-
+    
 }
 
 // 分页接口
