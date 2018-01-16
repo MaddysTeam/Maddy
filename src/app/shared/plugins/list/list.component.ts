@@ -71,7 +71,7 @@ export class ListComponent {
             this.rowDataBindingRequest.emit(
                 {
                     list: this,
-                    item: item
+                    item: item,
                 });
         }
     }

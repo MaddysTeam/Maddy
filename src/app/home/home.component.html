@@ -9,35 +9,35 @@
     <!-- <ngx-loading [show]="false" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading> -->
     <section>
 
-        <div class="row">
-            <div class="col-md-4 col-lg-3 col-sm-6 margin-bottom-30  block btn06" *ngFor="let item of [4,5,6,7,8,9]; index as i">
-      
-              <!-- card demo start -->
-              <app-card theme="scard" [data]="item" displayAnimate="animated fadeIn">
-                <ng-template #contentTemplate>
-                  <div class="scard-body">
-                    <a href="#">
-                      <img class="card-img-top" src="https://htmlstream.com/preview/unify-v2.4/assets/img-temp/600x295/img{{item}}.jpg">
-                    </a>
-                    <div class="card-title"></div>
-                    <p class="card-text">
-                      <strong>介绍：这是Card,使用了红色主题</strong>
-                    </p>
-                    <p>
-                      这是Card,使用了红色主题 这是Card,使用了....
-                    </p>
-                    <div>
-                      <a href="#" class="btn btn-md btn-danger">Go Go Go</a>
-                    </div>
-                    <p>
-                    </p>
-                  </div>
-                </ng-template>
-              </app-card>
-              <!-- home demo end -->
-            </div>
-          </div>
-          
+      <div class="row">
+        <div class="col-md-4 col-lg-3 col-sm-6 margin-bottom-30  block btn06" *ngFor="let item of [4,5,6,7,8,9]; index as i">
+
+          <!-- card demo start -->
+          <app-card theme="scard" [data]="item" displayAnimate="animated fadeIn">
+            <ng-template #contentTemplate>
+              <div class="scard-body">
+                <a href="#">
+                  <img class="card-img-top" src="https://htmlstream.com/preview/unify-v2.4/assets/img-temp/600x295/img{{item}}.jpg">
+                </a>
+                <div class="card-title"></div>
+                <p class="card-text">
+                  <strong>介绍：这是Card,使用了红色主题</strong>
+                </p>
+                <p>
+                  这是Card,使用了红色主题 这是Card,使用了....
+                </p>
+                <div>
+                  <a href="#" class="btn btn-md btn-danger">Go Go Go</a>
+                </div>
+                <p>
+                </p>
+              </div>
+            </ng-template>
+          </app-card>
+          <!-- home demo end -->
+        </div>
+      </div>
+
     </section>
 
     <section style="position:relative" class="margin-bottom-30">
@@ -95,10 +95,21 @@
 
     <section class="margin-bottom-30">
 
-        <button class="btn btn-primary" [modal]="modal">Trigger modal</button>
-        <app-modal #modal>
-            <!-- <router-outlet></router-outlet> -->
-        </app-modal>
+      <div class="btn btn-primary" [modal]="modal">Trigger modal</div>
+      <div class="btn btn-primary" [modal]="modal2">Trigger modal3</div>
+      <app-modal #modal modalId="modal1">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">弹出窗标题</h4>
+        </div>
+        <div class="modal-body">
+          这里可以是路由容器
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+          <button type="button" class="btn btn-primary">这里是按钮</button>
+        </div>
+      </app-modal>
 
     </section>
 
@@ -112,24 +123,20 @@
 
     </section>
 
-    <!-- <section>
-      <ngb-tabset type="pills" justify="start|center|end">
-        <ngb-tab title="Title1">
-          <ng-template ngbTabContent>
-            <div style="background:blue;" class="animated fadeIn">
-              这里是内容1
-            </div>
-          </ng-template>
-        </ngb-tab>
-        <ngb-tab title="Title2">
-          <ng-template ngbTabContent>
-            <div style="background:red;" class="animated fadeIn">
-              这里是内容2
-            </div>
-          </ng-template>
-        </ngb-tab>
-      </ngb-tabset>
-    </section> -->
+    <section>
+      <app-form></app-form>
+      <!-- <ul class="nav pills nav-stacked">
+        <li class="nav-item">
+          <a href="#" class="nav-link active">Active</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Link</a>
+        </li>
+        <li class="nav-item disabled">
+          <a href="#" class="nav-link">Disabled</a>
+        </li>
+      </ul> -->
+    </section>
 
   </div>
 
