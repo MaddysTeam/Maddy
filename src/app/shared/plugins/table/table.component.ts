@@ -31,12 +31,11 @@ export class TableComponent implements AfterContentInit, OnInit {
     @ContentChildren(ColumnComponent) columnTemplate: QueryList<ColumnComponent>;
     // 绑定数据源
     @Output() bindSourceRequest: EventEmitter<TableComponent>;
-    // 主题
-    @Input() tableTheme = 'table-theme-chocolate';
     // 列数组
     columnTitles: Array<string> = new Array<any>();
     // 数据源
     @Input() data: Array<any> = new Array<any>();
+    @Input() pagePosition = PagePostion.right;
 
     // 分页事件
     pageEvent: PageEvent = {
@@ -144,6 +143,12 @@ export interface PageEvent {
     total: number;
     pageSize: number;
     current: number;
+}
+
+export enum PagePostion {
+    left = 0,
+    center = 1,
+    right = 2
 }
 
 

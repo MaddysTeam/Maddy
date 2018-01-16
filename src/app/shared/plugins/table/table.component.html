@@ -1,5 +1,5 @@
-  <!-- table template start -->
-<table class="table table-striped {{tableTheme}}" >
+<!-- table template start -->
+<table class="table table-striped {{tableTheme}}">
   <thead>
     <tr>
 
@@ -32,26 +32,12 @@
 
       <!-- command column start -->
       <td *ngIf="showCommandColumn">
-        <!-- 注意! context 上下文 不要用mfData 而是用数据源data代替 -->
         <ng-template *ngTemplateOutlet="commandTemplate; context: data[i]"></ng-template>
       </td>
       <!-- command column end -->
 
     </tr>
   </tbody>
-  <tfoot>
-
-    <!-- pagination area start -->
-    <tr *ngIf="!isNoData">
-      <td colspan="4">
-        <ngb-pagination [(collectionSize)]="pageEvent.total" [(pageSize)]="pageEvent.pageSize" [(page)]="pageEvent.current" [boundaryLinks]="true" [directionLinks]="true"
-          (pageChange)="pageChange(pageEvent)">
-        </ngb-pagination>
-      </td>
-    </tr>
-     <!-- pagination area end -->
-
-  </tfoot>
 </table>
 
 <!-- no data area start -->
@@ -59,3 +45,14 @@
   没有数据
 </div>
 <!-- no data area end -->
+
+  <div class="table-page row" [ngClass]="
+  {
+    'justify-content-end': pagePosition == 2,
+    'justify-content-center':pagePosition == 1,
+    'justify-content-left':pagePosition == 0
+  }">
+      <ngb-pagination [(collectionSize)]="pageEvent.total" [(pageSize)]="pageEvent.pageSize" [(page)]="pageEvent.current" [boundaryLinks]="true"
+      [directionLinks]="true" (pageChange)="pageChange(pageEvent)">
+    </ngb-pagination>
+  </div>
