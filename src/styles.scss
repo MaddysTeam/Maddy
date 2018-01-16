@@ -242,9 +242,13 @@ box tools
 .margin-bottom-65 {
     margin-bottom: 65px !important;
 }
-
-.margin-top-10 {
+/* 习惯简写 */
+.margin-top-10, .mt-10 {
     margin-top: 10px !important;
+}
+
+.margin-top-20, .mt-20 {
+    margin-top: 20 !important;
 }
 
 .margin-left-0 {
@@ -253,6 +257,10 @@ box tools
 
 .margin-right-0 {
     margin-right: 0 !important;
+}
+
+.margin-right-10, .mr-10 {
+    margin-right: 10px;
 }
 
 .margin-right-20 {
@@ -345,4 +353,14 @@ footer
 footer {
     margin: 0;
     padding: 0;
+}
+
+
+/* clear */
+
+.clear-background,.clear-bg {
+    background: none !important;
+}
+.clear-border {
+    border: none !important;
 }

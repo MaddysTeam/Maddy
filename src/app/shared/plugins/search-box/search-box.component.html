@@ -1,3 +1,51 @@
-<p>
-  search-box works!
-</p>
+
+<div class="row">
+
+  <ng-container *ngFor="let item of config; let cur = index;">
+
+    <div [ngClass]="{
+      'col-md-3': col == 4,
+      'col-md-4': col == 3,
+      'mt-10': (cur + 1) > col
+    }">
+
+    <div class="input-group">
+      <span class="input-group-addon clear-bg clear-border">
+        {{item.label}}
+      </span>
+      <!-- 判断类型 start -->
+      <ng-container [ngSwitch]="item.type">
+
+        <ng-template [ngSwitchCase]="'text'">
+          <ng-container *ngIf="item.value === '1'; else block;">
+            <input type="text" class="form-control" placeholder="Username" [(ngModel)]="f[item.id]" (ngModelChange)="change(item.change)">
+          </ng-container>
+          <ng-template #block>
+            <input type="text" class="form-control" placeholder="Username">
+          </ng-template>
+        </ng-template>
+
+      </ng-container>
+      <!-- 判断类型 end -->
+    </div>
+
+    </div>
+
+  </ng-container>
+</div>
+<div class="search-action mt-20">
+  <div class="search-group-btns align-items-center justify-content-end">
+    <button type="button" class="btn btn-sm btn-primary mr-10"> 
+      <span class="oi oi-magnifying-glass"></span>
+      搜索
+    </button>
+    <button type="button" class="btn btn-sm btn-default mr-10"> <span class="oi oi-magnifying-glass"></span> 清空</button>
+    <a href="" class="mr-10">
+      展开搜索条件 <span class="oi oi-chevron-bottom"></span>
+      <!-- <span class="oi oi-chevron-top"></span> -->
+    </a>
+  </div>
+</div>
+
+
+
