@@ -29,17 +29,17 @@ export class HomeComponent {
   bindCarousel(carousel: CarouselComponent) {
     carousel.carousels = [
       {
-        url: 'http://demo.cssmoban.com/cssthemes4/tops_48_Metronic/assets/pages/img/frontend-slider/bg9.jpg',
+        url: 'http://pic2.ooopic.com/12/54/38/87bOOOPICeb_1024.jpg',
         title: 'this is title1',
         subTitle: ''
       },
       {
-        url: 'http://demo.cssmoban.com/cssthemes4/tops_48_Metronic/assets/pages/img/frontend-slider/bg9.jpg',
+        url: 'http://pic2.ooopic.com/12/54/38/87bOOOPICeb_1024.jpg',
         title: 'this is title2',
         subTitle: ''
       },
       {
-        url: 'http://demo.cssmoban.com/cssthemes4/tops_48_Metronic/assets/pages/img/frontend-slider/bg8.jpg',
+        url: 'http://pic2.ooopic.com/12/54/38/87bOOOPICeb_1024.jpg',
         title: 'this is title3',
         subTitle: ''
       },

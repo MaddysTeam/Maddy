@@ -6,7 +6,7 @@ import {
 @Component({
     selector: 'app-list',
     template: ` <ul class="list-group">
-                    <li class=" " *ngFor="let item of data" (rowbinding)="rowBinding(item)" >
+                    <li class="list-group-item" *ngFor="let item of data" (rowbinding)="rowBinding(item)" >
                       <ng-template *ngTemplateOutlet="itemTemplate; context: item"></ng-template>
                     </li>
                 </ul> 
@@ -22,9 +22,12 @@ import {
                 </div>
                 `,
     styles: [`
+    .list-group{
+        display:block;
+    }
     .list-group-item{
-        border-left:0px;
-        border-right:0px;
+        border:0px;
+        padding:0px;
     }
     .list-group-item:hover{
         background-color:#FFEBCD;

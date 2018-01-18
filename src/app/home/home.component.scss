@@ -35,9 +35,12 @@
 }
 
 .news {
-    .news-first-box img {
-        width: 100%;
-        height: 450px;
+    .news-first-box {
+        overflow: hidden;
+        & .img {
+            width: 100%;
+            height: 450px;
+        }
     }
     .news-first-text {
         position: absolute;
@@ -63,6 +66,15 @@
 }
 
 .users {
+    .user {
+        transition: all 0.4s ease-in-out 0s;
+        -moz-transition: all 0.4s ease-in-out 0s;
+        -o-transition: all 0.4s ease-in-out 0s;
+        -ms-transition: all 0.4s ease-in-out 0s;
+    }
+    .user:hover {
+        background: #EEE;
+    }
     .user-header {
         position: relative;
         overflow: hidden;

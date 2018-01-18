@@ -1,7 +1,7 @@
 <div class="news">
 
   <div class="news-banner margin-bottom-30">
-      <app-carousel [isShowControl]="true" (prevRequest)="carouselPrev($event)" (bindSourceRequest)="bindCarousel($event)"></app-carousel>
+    <app-carousel [isShowControl]="true" (prevRequest)="carouselPrev($event)" (bindSourceRequest)="bindCarousel($event)"></app-carousel>
   </div>
 
   <div class="news-main  margin-bottom-30">
@@ -12,9 +12,9 @@
 
           <app-list (bindSourceRequest)="bindList($event)" [ShowPagination]=false>
             <ng-template #itemTemplate>
-              <div class="list-item">
+              <div class="list-item animated fadeIn">
                 <a class="list-item-image">
-                  <img src="" border="0" width="120" height="120">
+                  <img src="http://www.chinaedu.edu.cn/sygdtplm/201611/W020170726561305233348.jpg" border="0" style="width:80%; height:80%" >
                 </a>
                 <div class="item-info">
                   <a href="#">
@@ -53,10 +53,10 @@
         </section>
 
         <section class="right-hot-box margin-bottom-30">
-          <h1 class="right-box-title">热门文章</h1>
+          <h1 class="right-box-title">热门新闻</h1>
           <app-list (bindSourceRequest)="bindList($event)" [ShowPagination]=false>
             <ng-template #itemTemplate>
-              <a href="/news/industryinformations/article_20170502_201.html" title="文化部：优先支持符合三个重大项目支持重点的PPP项目">
+              <a href="#" >
                 <span>1</span>
                 <h3>这里是新闻标题</h3>
               </a>
@@ -75,26 +75,28 @@
           <ul>
 
             <li class="item">
-              <a target="_blank" href="/tags.php?/PPP/">PPP</a>
+              <a target="_blank" href="#">PPP</a>
             </li>
 
           </ul>
         </section>
 
         <section class="right-recommend-box margin-bottom-30">
-          <h1 class="right-box-title">推荐文章</h1>
+          <h1 class="right-box-title">推荐新闻</h1>
 
           <app-list (bindSourceRequest)="bindRecommandList($event)" [ShowPagination]=false>
             <ng-template #itemTemplate>
-              <a href="/news/industryinformations/article_20170704_279.html" title="房企的PPP发展模式">
-                <img  src="" border="0" width="120" height="120" alt="房企的PPP发展模式">
-              </a>
-              <div class="content">
-                <a href="/news/industryinformations/article_20170704_279.html" title="房企的PPP发展模式">
-                  <h3>推荐文章标题</h3>
-                </a>
-                <p>推荐文章内容................</p>
-              </div> 
+              <div>
+                  <a href="#" title="">
+                    <img src="http://www.chinaedu.edu.cn/sygdtplm/201611/W020170726561303852656.jpg" border="0" width="120" height="120" alt="">
+                  </a>
+                  <div class="content">
+                    <a href="#" title="">
+                      <h3>推荐文章标题</h3>
+                    </a>
+                    <p>推荐文章内容................</p>
+                  </div>
+              </div>
             </ng-template>
           </app-list>
 

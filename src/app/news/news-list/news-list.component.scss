@@ -1,9 +1,13 @@
+/deep/ .list-group-item{
+    margin-top:20px !important;
+  }
 .news {
-
+  
     /*左侧列表*/
     .list-item {
-        height: 159px;
         position: relative;
+        height: 159px;
+        border-bottom: 1px solid #888;
     }
     .list-item .list-item-image {
         height: 126px;
@@ -12,10 +16,8 @@
         display: inline-block;
         float: left;
         cursor: pointer;
-        /* padding-right: 30px; */
     }
     .list-item img {
-        /* position: absolute; */
         width: 204px;
         height: 126px;
         transform: scale(1.0, 1.0);
@@ -116,7 +118,7 @@
     .right-recommend-box {
         height: 86px;
         border-bottom: 1px solid #DDD;
-        padding: 12px 0;
+  
     }
     
     .right-recommend-box img {
