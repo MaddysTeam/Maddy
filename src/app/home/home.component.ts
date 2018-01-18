@@ -82,8 +82,6 @@ export class HomeComponent {
       { 'col1': 'data-2', 'col2': 'img1' },
       { 'col1': 'data-2', 'col2': 'img1' },
       { 'col1': 'data-2', 'col2': 'img1' },
-      { 'col1': 'data-2', 'col2': 'img1' },
-      { 'col1': 'data-2', 'col2': 'img1' },
     ];
   }
 }

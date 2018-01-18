@@ -4,14 +4,18 @@ import { CommonModule } from '@angular/common';
 import { throwIfAlreadyLoaded } from './module-import-guard';
 import { NavComponent } from './nav/nav.component';
 import { NavRoutingModule } from './nav/nav.routing.module';
+import { FooterComponent } from './footer/footer.component'
+import { SharedModule } from '@app-shared';
+
 
 @NgModule({
-    declarations: [NavComponent],
+    declarations: [NavComponent,FooterComponent],
     imports: [
         NavRoutingModule,
-        CommonModule // we use ngFor
+        CommonModule ,
+        SharedModule
     ],
-    exports: [NavComponent],
+    exports: [NavComponent,FooterComponent], 
     // declarations: [NavComponent],
     // providers: [LoggerService]
 })

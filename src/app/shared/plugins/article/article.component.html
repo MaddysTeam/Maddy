@@ -1,5 +1,5 @@
 <article class="article default-theme">
-    <div class="article-head">
+    <div class="article-head" *ngIf="showHead">
         <h1 class="article-title">
             <a href="#">{{title}}</a>
         </h1>
@@ -13,7 +13,7 @@
     </div>
     <div class="article-media" *ngIf="showMedia">
         <a href="#">
-            <img [src]="mediaImageUrl">
+            <img class="article-media-img" [src]="mediaImageUrl">
         </a>
     </div>
     <div #content class="article-content" [style.height]="contentHeight>0?contentHeight+'px':'auto'">
@@ -23,10 +23,10 @@
         <button class="btn btn-default"  (click)="showAllContent($event)">阅读全文</button>
     </div>
     <footer class="article-footer clearfix">
-        <div class="pull-left tag-list">
-            <i class="fa fa-folder-open-o"></i>
+        <!-- <div class="pull-left tag-list">
+             <i class="fa fa-folder-open-o"></i>
         </div>
         <div class="pull-right share">
-        </div>
+        </div> -->
     </footer>
 </article>

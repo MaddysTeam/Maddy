@@ -6,127 +6,179 @@
   </div>
 
   <div class="home-main margin-bottom-30">
-    <!-- <ngx-loading [show]="false" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading> -->
-    <section>
+
+    <!--关于我们 开始-->
+    <section class="about-us margin-bottom-30">
+      <app-card theme="scard" [data]="item" displayAnimate="animated fadeIn">
+        <ng-template #contentTemplate>
+          <div class="box-title">
+            <span class="box-title-line"></span>
+            <h3>about us</h3>
+            <h2>关于
+              <strong>我们</strong>
+            </h2>
+            <p>某某部门</p>
+            <p>文字行2</p>
+            <p>文字行3 </p>
+          </div>
+
+          <!-- <div class="row aboutus-list">
+            <div class="col-lg-4 col-xs-4 animate-box fadeInUp animated-fast" data-animate-effect="fadeInUp">
+              <span class="aboutus-service"></span>
+              <p>xxxxxxx1</p>
+            </div>
+            <div class="col-lg-4 col-xs-4 animate-box fadeInUp animated-fast" data-animate-effect="fadeInUp">
+              <span class="aboutus-resources"></span>
+              <p>xxxxxxxxw2</p>
+            </div>
+            <div class="col-lg-4 col-xs-4 animate-box fadeInUp animated-fast" data-animate-effect="fadeInUp">
+              <span class="aboutus-technology"></span>
+              <p>xxxxxxxxx3</p>
+            </div>
+          </div> -->
+        </ng-template>
+      </app-card>
+
+    </section>
+    <!--关于我们 结束-->
+
+    <!--新闻 开始-->
+    <section class="news margin-bottom-30">
+      <app-card>
+        <ng-template #contentTemplate>
+          <div class="index-box-news">
+            <div class="box-title">
+              <span class="box-title-line"></span>
+              <h3>news</h3>
+              <h2>部门
+                <strong>新闻</strong>
+              </h2>
+            </div>
+            <div class="row news-list">
+              <div class="col-lg-5 col-xs-5">
+
+                <app-card>
+                  <ng-template #contentTemplate>
+                    <div class="news-first-box animate-box fadeInLeft animated-fast" data-animate-effect="fadeInLeft">
+                      <img src="http://www.ysemm.cn/templets/newysemmcn/images/news-first-bg.jpg" alt="项目融资相关新闻">
+                      <div class="news-first-text">
+                        <a href="/news/companynotices/article_20170628_271.html" title="亿升帮您详细解析PPP的歪路与正道">
+                          <h4>这里是主要新闻</h4>
+                        </a>
+                        <p>主要新闻内容。</p>
+                      </div>
+                    </div>
+                  </ng-template>
+                </app-card>
+
+              </div>
+              <div class="col-lg-7 col-xs-7">
+
+                <app-list (bindSourceRequest)="bindList($event)" [ShowPagination]=false>
+                  <ng-template #itemTemplate>
+                    <div class="col-lg-2 col-xs-2">
+                      <span>
+                        <strong>2017-07</strong>
+                      </span>
+                    </div>
+                    <div class="col-lg-10 col-xs-10">
+                      <a href="/news/industryinformations/article_20170704_279.html" title="房企的PPP发展模式">
+                        <h4>新闻标题1</h4>
+                      </a>
+                      <p>新闻内容</p>
+                      <div class="row-tags">
+                        <a href="#">底部链接</a>
+                      </div>
+                    </div>
+                  </ng-template>
+                </app-list>
+
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </app-card>
+    </section>
+    <!--新闻 结束-->
+
+    <!--项目展示 开始-->
+    <section class="projects margin-bottom-30">
+
+      <app-card theme="scard" [data]="item" displayAnimate="animated fadeIn">
+        <ng-template #contentTemplate>
+          <div class="box-title">
+            <span class="box-title-line"></span>
+            <h3>projects</h3>
+            <h2>项目
+              <strong>展示</strong>
+            </h2>
+          </div>
+        </ng-template>
+      </app-card>
 
       <div class="row">
-        <div class="col-md-4 col-lg-3 col-sm-6 margin-bottom-30  block btn06" *ngFor="let item of [4,5,6,7,8,9]; index as i">
-
-          <!-- card demo start -->
-          <app-card theme="scard" [data]="item" displayAnimate="animated fadeIn">
-            <ng-template #contentTemplate>
-              <div class="scard-body">
-                <a href="#">
-                  <img class="card-img-top" src="https://htmlstream.com/preview/unify-v2.4/assets/img-temp/600x295/img{{item}}.jpg">
-                </a>
-                <div class="card-title"></div>
-                <p class="card-text">
-                  <strong>介绍：这是Card,使用了红色主题</strong>
-                </p>
-                <p>
-                  这是Card,使用了红色主题 这是Card,使用了....
-                </p>
-                <div>
-                  <a href="#" class="btn btn-md btn-danger">Go Go Go</a>
+          <div class="col-md-4 col-lg-3 col-sm-6 margin-bottom-30  block btn06" *ngFor="let item of [4,5,6,7,8,9,10,11]; index as i">
+  
+            <app-card theme="scard" [data]="item" displayAnimate="animated fadeIn">
+              <ng-template #contentTemplate>
+                <div class="scard-body">
+                  <a href="#">
+                    <img class="card-img-top" src="https://htmlstream.com/preview/unify-v2.4/assets/img-temp/600x295/img{{item}}.jpg">
+                  </a>
+                  <div class="card-title"></div>
+                  <p class="card-text">
+                    <strong>项目名称</strong>
+                  </p>
+                  <p>
+                    项目简介....
+                  </p>
+                  <div>
+                    <a href="#" class="btn btn-md btn-danger">查看详情</a>
+                  </div>
+                  <p>
+                  </p>
                 </div>
-                <p>
-                </p>
+              </ng-template>
+            </app-card>
+            
+          </div>
+        </div>
+
+    </section>
+    <!--项目展示 结束-->
+
+    <section class="users margin-bottom-30">
+       
+        <app-card theme="scard" [data]="item" displayAnimate="animated fadeIn">
+            <ng-template #contentTemplate>
+              <div class="box-title">
+                <span class="box-title-line"></span>
+                <h3>Employee</h3>
+                <h2>部门
+                  <strong>大佬</strong>
+                </h2>
               </div>
             </ng-template>
           </app-card>
-          <!-- home demo end -->
-        </div>
-      </div>
+        
+          <div class="row">
+              <div class="col-md-3 col-lg-3 col-sm-6 margin-bottom-30  block btn06" *ngFor="let item of [1,2,3,4]; index as i">
 
-    </section>
-
-    <section style="position:relative" class="margin-bottom-30">
-
-      <!-- table demo start -->
-      <app-table #table [showCommandColumn]="true" (bindSourceRequest)="bindTable($event)">
-
-        <ng-template #commandTemplate let-id="col1" let-name="col2">
-          <button type="button" (click)="click($event,id)" class="btn btn-sm btn-danger btn-delete">删除 {{name}}</button>
-        </ng-template>
-
-        <!-- <app-column  columnName="col1" content="<div id='&col2'><img src='https://htmlstream.com/preview/unify-v2.4/assets/img-temp/600x295/&col2.jpg' /></div>">
-        </app-column> -->
-
-      </app-table>
-      <!-- table demo end -->
-
-    </section>
-
-    <section class="margin-bottom-30">
-
-      <popover-content #myPopover title="弹出框标题" placement="right" [closeOnClickOutside]="true">
-        <div style="width:300px; height:300px;">
-          <b>Very</b>
-          <span style="color: #C21F39">这里是</span>
-          <span style="color: #00b3ee">弹出框</span>
-          <b>
-            <i>
-              <span style="color: #ffc520">啊</span>
-            </i>
-          </b>
-          <small>啊</small>.
-        </div>
-      </popover-content>
-      <button [popover]="myPopover" [popoverOnHover]="true" [popoverCloseOnMouseOutside]="true">弹出框测试</button>
-      <button [popover]="myPopover" [popoverOnHover]="true" [popoverCloseOnMouseOutside]="true">弹出框测试</button>
-
-    </section>
-
-    <section class="margin-bottom-30">
-
-      <app-article title="如何使用ngContent" subTitle="呵呵" author="某某" date="2017-12-1" mediaImageUrl="http://demo.cssmoban.com/cssthemes4/tops_48_Metronic/assets/pages/img/frontend-slider/bg9.jpg"
-        [showPreview]=true [previewTextLength]=500 [showMedia]=false>
-        <h3>文章内容</h3>
-        <p></p>
-        <div class="font-size-14">
-          <!-- <img src='https://htmlstream.com/preview/unify-v2.4/assets/img-temp/600x295/img4.jpg' /> -->
-          如果你尝试在 Angular 中编写可重复使用的组件，则可能会接触到内容投射的概念。然后你发现了 &#60;ng-content&#62;，并找到了一些关于它的文章，进而实现了所需的功能。 接下来我们来通过一个简单的示例，一步步介绍 &#60;ngcontent&#62;
-          所涉及的内容。 Simple example 在本文中我们使用一个示例，来演示不同的方式实现内容投影。由于许多问题与Angular 中的组件生命周期相关，因此我们的主要组件将显示一个计数器，用于展示它已被实例化的次数： https://www.cnblogs.com/ztwBlog/p/6368202.html
-
-        </div>
-      </app-article>
-
-    </section>
-
-    <section class="margin-bottom-30">
-
-      <div class="btn btn-primary" [modal]="modal">测试登录</div>
-      <app-modal #modal modalId="modal1">
-        <div class="modal-header">
-          <div>
-          用户登录
-          </div>
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        </div>
-        <div class="modal-body">
-          <app-login></app-login>
-        </div>
-
-      </app-modal>
-
-    </section>
-
-    <!-- -->
-    <section class="margin-bottom-30">
-
-      <app-list (bindSourceRequest)="bindList($event)" (pageEvent)="{pageSize:5}">
-        <ng-template #itemTemplate let-name="col2">
-          <a href="#">{{name}}</a>
-        </ng-template>
-      </app-list>
-
-    </section>
-
-    <section>
+                  <app-card>
+                     <ng-template #contentTemplate>
+                        <div class="user-header margin-bottom-30">
+                            <!-- <img class="card-img-top" src="http://snowcoal.com/image/portrait/default_header.jpg"> -->
+                        </div>
+                        <div class="user-name text-center font-size-16">
+                            小伙子
+                        </div>
+                     </ng-template>
+                  </app-card>
      
+               </div>
+          </div>
+        
     </section>
 
   </div>
-
-</div>
-<!-- home demo end -->
+  <!-- home demo end -->

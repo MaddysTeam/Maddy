@@ -32,13 +32,13 @@ import { AppRoutingModule } from './app.routing.module';
 import { CoreModule } from './core/core.module';
 import { UsersModule } from './users/users.module';
 import { HomeModule } from './home/home.module';
+import { NewsModule } from './news/news.module'
 
 @NgModule({
     declarations: [
         AppComponent
     ],
     imports: [
-        // ststem
         BrowserModule,
         FormsModule,
         ReactiveFormsModule,
@@ -47,6 +47,7 @@ import { HomeModule } from './home/home.module';
         CoreModule,
         UsersModule,
         HomeModule,
+        NewsModule
     ],
     providers: [],
     bootstrap: [AppComponent],

@@ -34,6 +34,9 @@ export class ArticleComponent implements AfterViewInit, OnInit {
     @Input()
     showMedia = false;
 
+    @Input()
+    showHead = true;
+    
     @Input() previewTextLength = Infinity;
 
     @ViewChild("content") articleContent: ElementRef;

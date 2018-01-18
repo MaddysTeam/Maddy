@@ -58,9 +58,7 @@ CSS 注意事项
 
 /*** Global ***/
 
-$default-font:'Open Sans',
-Arial,
-sans-serif;
+$default-font:14px/1.5 'microsoft yaHei','微软雅黑',tahoma, arial;
 $default-font-size:12px;
 $default-color:#333;
 $margin-zero:0;
@@ -111,7 +109,7 @@ a {
     }
     &:hover {
         color: #E02222;
-        text-decoration:none;
+        text-decoration: none;
     }
 }
 
@@ -242,12 +240,17 @@ box tools
 .margin-bottom-65 {
     margin-bottom: 65px !important;
 }
+
+
 /* 习惯简写 */
-.margin-top-10, .mt-10 {
+
+.margin-top-10,
+.mt-10 {
     margin-top: 10px !important;
 }
 
-.margin-top-20, .mt-20 {
+.margin-top-20,
+.mt-20 {
     margin-top: 20 !important;
 }
 
@@ -259,7 +262,8 @@ box tools
     margin-right: 0 !important;
 }
 
-.margin-right-10, .mr-10 {
+.margin-right-10,
+.mr-10 {
     margin-right: 10px;
 }
 
@@ -305,6 +309,15 @@ box tools
 
 .font-size-16 {
     font-size: 16px
+}
+
+
+/***
+border
+**/
+
+.border-light-gray {
+    border:1px solid rgba(0, 0, 0, .125);
 }
 
 
@@ -358,9 +371,11 @@ footer {
 
 /* clear */
 
-.clear-background,.clear-bg {
+.clear-background,
+.clear-bg {
     background: none !important;
 }
+
 .clear-border {
     border: none !important;
 }

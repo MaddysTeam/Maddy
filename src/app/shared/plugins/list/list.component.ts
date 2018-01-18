@@ -1,17 +1,17 @@
 import {
     Component, ContentChild, AfterViewInit, TemplateRef,
-    EventEmitter, Output, Input
+    EventEmitter, Output, Input, OnInit
 } from '@angular/core';
 
 @Component({
     selector: 'app-list',
     template: ` <ul class="list-group">
-                    <li class="list-group-item" *ngFor="let item of data" (rowbinding)="rowBinding(item)" >
+                    <li class=" " *ngFor="let item of data" (rowbinding)="rowBinding(item)" >
                       <ng-template *ngTemplateOutlet="itemTemplate; context: item"></ng-template>
                     </li>
                 </ul> 
                 <div class="row justify-content-center" style="margin-top:30px;">
-                <ngb-pagination
+                <ngb-pagination *ngIf="ShowPagination"
                   [(collectionSize)]="pageEvent.total"
                   [(pageSize)]="pageEvent.pageSize"
                   [(page)]="pageEvent.current" 
@@ -32,7 +32,8 @@ import {
     `]
 })
 
-export class ListComponent {
+export class ListComponent implements OnInit {
+
     // 列表数据
     data: Array<any>;
 
@@ -46,6 +47,7 @@ export class ListComponent {
         current: 0,
         total: 0
     };
+    @Input() ShowPagination = true;
 
     @Input() IsUsePagination = true;
 
@@ -58,6 +60,12 @@ export class ListComponent {
     constructor() {
         this.bindSourceRequest = new EventEmitter();
         this.rowDataBindingRequest = new EventEmitter();
+    }
+
+    ngOnInit(): void {
+        if (!this.ShowPagination) {
+            this.bindSourceRequest.emit(this);
+        }
     }
 
     // 分页事件触发
@@ -75,7 +83,7 @@ export class ListComponent {
                 });
         }
     }
-    
+
 }
 
 // 分页接口

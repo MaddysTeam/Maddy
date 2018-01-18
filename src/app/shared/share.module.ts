@@ -17,6 +17,7 @@ import { ListComponent } from 'app/shared/plugins/list/list.component';
 import { ModalComponent } from 'app/shared/plugins/modal/modal.component';
 import { ModalDirective } from 'app/shared/plugins/modal/modal.directive';
 import { LoginComponent } from 'app/shared/plugins/forms/login/login.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 //  module
 const MODULE = [
@@ -24,6 +25,7 @@ const MODULE = [
     FormsModule,
     NgbPaginationModule,
     ReactiveFormsModule,
+    AngularFontAwesomeModule 
 ];
 
 //  声明(declarations) 导出(exports) 输入(entryComponents)

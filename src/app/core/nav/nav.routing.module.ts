@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { UserListComponent } from '../../users/user-list/user-list.component';
 import { HomeComponent } from '../../home/home.component';
+import { NewsListComponent } from '../../news/news-list/news-list.component';
 
 const usersRoutes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'users', component: UserListComponent },
-    { path: 'demo', loadChildren: '../../demo/demo.module#DemoModule'}
+    { path: 'news', component: NewsListComponent },
+    { path: 'demo', loadChildren: '../../demo/demo.module#DemoModule' }
 ];
 
 @NgModule({
@@ -19,4 +21,4 @@ const usersRoutes: Routes = [
     exports: [RouterModule]
 })
 
-export class NavRoutingModule {}
+export class NavRoutingModule { }

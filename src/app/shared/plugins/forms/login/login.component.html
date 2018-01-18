@@ -1,29 +1,36 @@
 <div class="form-top">
     <div class="form-top-left">
-        <h3>欢迎！</h3>
+        <h3><fa name="chain"></fa>欢迎！</h3>
         <p></p>
         <p>请在下方输入用户名和密码</p>
     </div>
     <div class="form-top-right">
-        <i class="fa fa-key"></i>
+        <fa name="pencil"></fa>
     </div>
 </div>
 <div class="form-bottom">
-    <form role="form" action="" method="post" class="login-form">
+    <form role="form" action="" method="post" class="login-form" (ngSubmit)="login()" [formGroup]="formGroup">
         <div class="form-group">
-            <label class="sr-only" for="form-username">Username</label>
-            <input type="text" name="form-username" placeholder="填写用户名..." class="form-username form-control" id="form-username">
+            <label class="" for="form-username"><fa name="user-circle"></fa>用户名</label>
+            <input type="text" placeholder="填写用户名..." class="form-username form-control" id="form-username" formControlName="name">
         </div>
         <div class="form-group">
-            <label class="sr-only" for="form-password">Password</label>
-            <input type="password" name="form-password" placeholder="填写密码..." class="form-password form-control" id="form-password">
+            <label class="" for="form-username"><fa name="key"></fa> 密码</label>
+            <input type="password" placeholder="填写密码..." class="form-password form-control" id="form-password" formControlName="password">
         </div>
-        <!-- <div class="form-group">
-                              <input type="checkbox"> 记住我
-                        </div> -->
-        <button type="submit" class="btn btn-primary">登录</button>
-        <div class="text-center maring-top-30">
-            <a>忘记密码？</a>
+
+
+        <div class="alert alert-danger" *ngIf="isValidateError">
+            <div class="errorMessage"><fa name="warning"></fa>用户名或密码错误</div>
+            <!-- TODO: 先注释
+            <p *ngIf="!formGroup.controls['name'].valid">用户名{{formGroup.controls['name'].errors.errorMessage}}</p>
+            <p *ngIf="!formGroup.controls['password'].valid">密码{{formGroup.controls['password'].errors.errorMessage}}</p> 
+            -->
+        </div>
+
+        <button type="submit" class="btn btn-primary"><fa name="sign-in"></fa>登录</button>
+        <div class="text-center forget-password">
+            <a href="#">忘记密码？</a>
         </div>
     </form>
 </div>

@@ -1,0 +1,108 @@
+<div class="news">
+
+  <div class="news-banner margin-bottom-30">
+      <app-carousel [isShowControl]="true" (prevRequest)="carouselPrev($event)" (bindSourceRequest)="bindCarousel($event)"></app-carousel>
+  </div>
+
+  <div class="news-main  margin-bottom-30">
+    <div class="row">
+      <div class="left col-lg-8 col-xs-8">
+
+        <section class="list-news ">
+
+          <app-list (bindSourceRequest)="bindList($event)" [ShowPagination]=false>
+            <ng-template #itemTemplate>
+              <div class="list-item">
+                <a class="list-item-image">
+                  <img src="" border="0" width="120" height="120">
+                </a>
+                <div class="item-info">
+                  <a href="#">
+                    <h2>新闻标题</h2>
+                  </a>
+                  <p>
+                    各位同事： 为进一步强化广大职工消防安全意识，提高抗击突发事件的应变能力，确保在发生突发事件时，能够及时、迅速、高效、有序地做好应急处理工作，维护我校正常教学及行政工作秩序，确保全校教职工安全，特邀杨浦消防到我校举办消防安全知识培训讲座。现将有关事宜通知如下|：
+                    一、 讲座时间 2017年11月10日(周五)下午14:00。 二、讲座地点 国顺路校区行政楼二楼高清演播室。 欢迎广大职工届时聆听学习！
+                  </p>
+                  <span class="news-view">
+                    <fa name="eye"></fa>210</span>
+                  <span class="news-date">
+                    <fa name="calendar"></fa>2017-07-14</span>
+                  <span class="news-button">
+                    <button class="btn btn-sm btn-danger">阅读全文&gt;&gt;</button>
+                  </span>
+                </div>
+              </div>
+            </ng-template>
+          </app-list>
+
+        </section>
+
+      </div>
+
+      <div class="right col-lg-4 col-xs-4">
+
+        <section class="right-search-box margin-bottom-30">
+          <form name="formsearch" action="/plus/search.php">
+            <input class="search-text" name="q" type="text" placeholder="“搜索相关关键词”">
+            <input type="hidden" name="searchtype" value="titlekeyword">
+            <button class="search-btn">
+              <fa name="search"></fa>
+            </button>
+          </form>
+        </section>
+
+        <section class="right-hot-box margin-bottom-30">
+          <h1 class="right-box-title">热门文章</h1>
+          <app-list (bindSourceRequest)="bindList($event)" [ShowPagination]=false>
+            <ng-template #itemTemplate>
+              <a href="/news/industryinformations/article_20170502_201.html" title="文化部：优先支持符合三个重大项目支持重点的PPP项目">
+                <span>1</span>
+                <h3>这里是新闻标题</h3>
+              </a>
+            </ng-template>
+          </app-list>
+          <!-- <ul>
+            <li>
+             
+            </li>
+
+          </ul> -->
+        </section>
+
+        <section class="right-tag-box margin-bottom-30">
+          <h1 class="right-box-title">热门标签</h1>
+          <ul>
+
+            <li class="item">
+              <a target="_blank" href="/tags.php?/PPP/">PPP</a>
+            </li>
+
+          </ul>
+        </section>
+
+        <section class="right-recommend-box margin-bottom-30">
+          <h1 class="right-box-title">推荐文章</h1>
+
+          <app-list (bindSourceRequest)="bindRecommandList($event)" [ShowPagination]=false>
+            <ng-template #itemTemplate>
+              <a href="/news/industryinformations/article_20170704_279.html" title="房企的PPP发展模式">
+                <img  src="" border="0" width="120" height="120" alt="房企的PPP发展模式">
+              </a>
+              <div class="content">
+                <a href="/news/industryinformations/article_20170704_279.html" title="房企的PPP发展模式">
+                  <h3>推荐文章标题</h3>
+                </a>
+                <p>推荐文章内容................</p>
+              </div> 
+            </ng-template>
+          </app-list>
+
+        </section>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>

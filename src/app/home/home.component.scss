@@ -1,19 +1,121 @@
 .home {
     .home-main {
-        position: relative;
-        width: 90%;
-        max-width: 1300px;
-        margin: 0 auto;
-        
-        img{  
-            cursor: pointer;  
-            transition: all 0.3s; 
-        }  
-        img:hover{  
-            transform: scale(1.2);  
-        }  
+        img {
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        img:hover {
+            transform: scale(1.2);
+        }
     }
-    .scard-body{
+    .scard-body {
         overflow: hidden;
     }
+}
+
+.about-us {
+    .index-box-aboutus {
+        padding-top: 58px;
+        text-align: center;
+    }
+    .aboutus-list {
+        padding: 35px 20%;
+    }
+    .aboutus-list span {
+        width: 84px;
+        height: 65px;
+        display: inline-block;
+        background-repeat: no-repeat;
+    }
+    .aboutus-list p {
+        font-size: 18px;
+        letter-spacing: 2px;
+        line-height: 40px;
+    } // .aboutus-service {
+}
+
+.news {
+    .news-first-box img {
+        width: 100%;
+        height: 450px;
+    }
+    .news-first-text {
+        position: absolute;
+        bottom: 0;
+        background: hsla(0, 0%, 100%, 0.8);
+        padding: 20px;
+        letter-spacing: 1px;
+        width: 434px;
+    }
+    .news-first-text h4 {
+        line-height: 28px;
+        /* font-weight: 600; */
+        color: #000000;
+    }
+    .news-first-text p {
+        line-height: 22px;
+        /* padding: 0 20px; */
+        /* width: 405px; */
+    }
+    .news-other-box {
+        /* padding-left: 15px; */
+    }
+}
+
+.users {
+    .user-header {
+        position: relative;
+        overflow: hidden;
+        margin: 0 auto;
+        width: 150px;
+        height: 150px;
+        background-image: url(http://snowcoal.com/image/portrait/default_header.jpg);
+        background-size: 100% 100%;
+        border: 1px solid #888;
+        border-radius: 50% 50%;
+        color: red;
+    }
+    .user-header img {
+        widows: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+}
+
+.box-title {
+    text-align: center;
+}
+
+.box-title-line {
+    width: 80px;
+    height: 3px;
+    background: #de0f18;
+    display: inline-block;
+}
+
+.box-title h3 {
+    font-size: 22px;
+    letter-spacing: 3px;
+    /* font-family: sans-serif; */
+    line-height: 38px;
+    font-weight: normal;
+}
+
+.box-title h2 {
+    letter-spacing: 7px;
+    line-height: 34px;
+    padding-bottom: 30px;
+    font-size: 34px;
+}
+
+.box-title h2 strong {
+    color: #de0f18;
+    font-weight: normal;
+}
+
+.box-title p {
+    height: 26px;
+    line-height: 26px;
+    font-size: 15px;
+    letter-spacing: 2px;
 }
