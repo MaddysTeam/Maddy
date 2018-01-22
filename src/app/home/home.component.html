@@ -4,6 +4,7 @@
   <div class="carousel margin-bottom-30">
     <app-carousel [isShowControl]="true" (prevRequest)="carouselPrev($event)" (bindSourceRequest)="bindCarousel($event)"></app-carousel>
   </div>
+  
 
   <div class="home-main margin-bottom-30">
 
@@ -61,9 +62,9 @@
                 <app-card>
                   <ng-template #contentTemplate>
                     <div class="news-first-box animate-box fadeInLeft animated-fast" data-animate-effect="fadeInLeft">
-                      <img src="http://www.ysemm.cn/templets/newysemmcn/images/news-first-bg.jpg" alt="项目融资相关新闻">
+                      <img src="http://www.ysemm.cn/templets/newysemmcn/images/news-first-bg.jpg" >
                       <div class="news-first-text">
-                        <a href="/news/companynotices/article_20170628_271.html" title="亿升帮您详细解析PPP的歪路与正道">
+                        <a target="_blank"  [routerLink]="['/news/detail']" >
                           <h4>这里是主要新闻</h4>
                         </a>
                         <p>主要新闻内容。</p>

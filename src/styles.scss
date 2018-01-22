@@ -58,61 +58,19 @@ CSS 注意事项
 
 /*** Global ***/
 
-$default-font:14px/1.5 'microsoft yaHei','微软雅黑',tahoma, arial;
-$default-font-size:12px;
-$default-color:#333;
-$margin-zero:0;
-
-/*** 
-body 
-***/
-
 body {
-    direction: ltr;
-    margin: $margin-zero;
-    color: $default-color;
-    font: $default-font;
-    font-size: $default-font-size;
-    background: #fff;
+    margin: 0;
+    padding: 0;
 }
 
 
-/***
-h tag
-***/
+/*** 导入主题 ***/
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font: $default-font;
-    margin: $margin-zero;
-    color: $default-color;
-}
+@import "assets/css/bootstrap-themes/default/default-theme.scss";
 
-h1 {
-    margin-bottom: 15px;
-}
+/*** 导入ootstrap ***/
 
-
-/***
-link
-***/
-
-a {
-    &:focus,
-    &:active {
-        outline: 0;
-        text-decoration: none;
-    }
-    &:hover {
-        color: #E02222;
-        text-decoration: none;
-    }
-}
-
+@import "../node_modules/bootstrap/scss/bootstrap";
 
 /***
 box tools
@@ -309,63 +267,6 @@ box tools
 
 .font-size-16 {
     font-size: 16px
-}
-
-
-/***
-border
-**/
-
-.border-light-gray {
-    border:1px solid rgba(0, 0, 0, .125);
-}
-
-
-/***
-leader
-***/
-
-@mixin leader {
-    font-size: 16px;
-}
-
-
-/***
-header
-***/
-
-header {
-    margin: 0;
-    padding: 0
-}
-
-
-/***
-nav
-***/
-
-.nav {
-    @include leader;
-}
-
-
-/***
-main
-***/
-
-main {
-    margin: 0;
-    padding: 0;
-}
-
-
-/***
-footer  
-***/
-
-footer {
-    margin: 0;
-    padding: 0;
 }
 
 

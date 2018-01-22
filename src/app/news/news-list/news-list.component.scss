@@ -2,7 +2,7 @@
     margin-top:20px !important;
   }
 .news {
-  
+    .list-news{min-width: 500px;}
     /*左侧列表*/
     .list-item {
         position: relative;
@@ -111,10 +111,6 @@
     }
 
     /*右侧推荐板块*/
-
-    .right-recommend-box {
-    }
-    
     .right-recommend-box {
         height: 86px;
         border-bottom: 1px solid #DDD;

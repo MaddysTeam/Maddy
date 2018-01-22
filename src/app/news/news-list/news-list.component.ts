@@ -20,6 +20,8 @@ export class NewsListComponent {
       { 'col1': 'data-2', 'col2': 'img1' },
       { 'col1': 'data-2', 'col2': 'img1' },
       { 'col1': 'data-2', 'col2': 'img1' },
+      { 'col1': 'data-2', 'col2': 'img1' },
+      { 'col1': 'data-2', 'col2': 'img1' },
     ];
   }
 
@@ -27,7 +29,7 @@ export class NewsListComponent {
     list.data = [
       { 'id': 'data-2', 'name': 'img1' },
       { 'col1': 'data-2', 'col2': 'img1' },
-      { 'col1': 'data-2', 'col2': 'img1' }
+      { 'col1': 'data-2', 'col2': 'img1' },
     ];
   }
 

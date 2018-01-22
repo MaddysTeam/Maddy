@@ -1,20 +1,24 @@
+<!--新闻列表页 开始 -->
 <div class="news">
 
+  <!--新闻banner 开始 -->
   <div class="news-banner margin-bottom-30">
     <app-carousel [isShowControl]="true" (prevRequest)="carouselPrev($event)" (bindSourceRequest)="bindCarousel($event)"></app-carousel>
   </div>
+  <!--新闻banner 结束 -->
 
   <div class="news-main  margin-bottom-30">
     <div class="row">
       <div class="left col-lg-8 col-xs-8">
 
-        <section class="list-news ">
+        <!--左侧列表 开始 -->
+        <section class="list-news">
 
           <app-list (bindSourceRequest)="bindList($event)" [ShowPagination]=false>
             <ng-template #itemTemplate>
               <div class="list-item animated fadeIn">
                 <a class="list-item-image">
-                  <img src="http://www.chinaedu.edu.cn/sygdtplm/201611/W020170726561305233348.jpg" border="0" style="width:80%; height:80%" >
+                  <img src="http://www.chinaedu.edu.cn/sygdtplm/201611/W020170726561305233348.jpg" border="0" style="width:80%; height:80%">
                 </a>
                 <div class="item-info">
                   <a href="#">
@@ -29,7 +33,7 @@
                   <span class="news-date">
                     <fa name="calendar"></fa>2017-07-14</span>
                   <span class="news-button">
-                    <button class="btn btn-sm btn-danger">阅读全文&gt;&gt;</button>
+                    <a class="btn btn-sm btn-danger" [routerLink]="['/news/detail']" [queryParams]="{debug: true}">阅读全文&gt;&gt;</a>
                   </span>
                 </div>
               </div>
@@ -37,11 +41,13 @@
           </app-list>
 
         </section>
+        <!--左侧列表 开始 -->
 
       </div>
 
       <div class="right col-lg-4 col-xs-4">
 
+        <!--搜索框 开始 -->
         <section class="right-search-box margin-bottom-30">
           <form name="formsearch" action="/plus/search.php">
             <input class="search-text" name="q" type="text" placeholder="“搜索相关关键词”">
@@ -51,56 +57,57 @@
             </button>
           </form>
         </section>
+        <!--搜索框 结束 -->
 
+        <!--热点新闻列表 开始 -->
         <section class="right-hot-box margin-bottom-30">
           <h1 class="right-box-title">热门新闻</h1>
+
           <app-list (bindSourceRequest)="bindList($event)" [ShowPagination]=false>
             <ng-template #itemTemplate>
-              <a href="#" >
+              <a href="#">
                 <span>1</span>
                 <h3>这里是新闻标题</h3>
               </a>
             </ng-template>
           </app-list>
-          <!-- <ul>
-            <li>
-             
-            </li>
 
-          </ul> -->
         </section>
+        <!--热点新闻列表 结束-->
 
+        <!--标签列表 开始 -->
         <section class="right-tag-box margin-bottom-30">
           <h1 class="right-box-title">热门标签</h1>
           <ul>
-
             <li class="item">
               <a target="_blank" href="#">PPP</a>
             </li>
-
           </ul>
         </section>
+        <!--标签列表 结束 -->
 
+        <!--推荐新闻列表 开始 -->
         <section class="right-recommend-box margin-bottom-30">
           <h1 class="right-box-title">推荐新闻</h1>
 
           <app-list (bindSourceRequest)="bindRecommandList($event)" [ShowPagination]=false>
             <ng-template #itemTemplate>
               <div>
+                <a href="#" title="">
+                  <img src="http://www.chinaedu.edu.cn/sygdtplm/201611/W020170726561303852656.jpg" border="0" width="120" height="120" alt="">
+                </a>
+                <div class="content">
                   <a href="#" title="">
-                    <img src="http://www.chinaedu.edu.cn/sygdtplm/201611/W020170726561303852656.jpg" border="0" width="120" height="120" alt="">
+                    <h3>推荐文章标题</h3>
                   </a>
-                  <div class="content">
-                    <a href="#" title="">
-                      <h3>推荐文章标题</h3>
-                    </a>
-                    <p>推荐文章内容................</p>
-                  </div>
+                  <p>推荐文章内容................</p>
+                </div>
               </div>
             </ng-template>
           </app-list>
 
         </section>
+        <!--推荐新闻列表 结束 -->
 
       </div>
 
@@ -108,3 +115,4 @@
   </div>
 
 </div>
+<!--新闻列表页 结束 -->

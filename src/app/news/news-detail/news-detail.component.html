@@ -1,0 +1,65 @@
+<!--新闻明细页 开始 -->
+<div class="news-detail">
+
+  <!--新闻banner 开始 -->
+  <div class="news-banner margin-bottom-30">
+      <app-carousel [isShowControl]="true" (prevRequest)="carouselPrev($event)" (bindSourceRequest)="bindCarousel($event)"></app-carousel>
+    </div>
+
+  <div class="news-detial-main margin-bottom-30">
+    <div class="row">
+
+      <!--左侧新闻明细 开始 -->
+      <div class="col-lg-8 col-xs-8">
+       <section class="news-detail-content">
+
+         <app-article title="如何使用ngContent" subTitle="呵呵" author="某某" date="2017-12-1" mediaImageUrl="http://demo.cssmoban.com/cssthemes4/tops_48_Metronic/assets/pages/img/frontend-slider/bg9.jpg"
+           [showPreview]=true [previewTextLength]=500 [showMedia]=false>
+           <p></p>
+           <div class="font-size-14">
+            <img src='https://htmlstream.com/preview/unify-v2.4/assets/img-temp/600x295/img4.jpg' />
+             如果你尝试在 Angular 中编写可重复使用的组件，则可能会接触到内容投射的概念。然后你发现了 &#60;ng-content&#62;，并找到了一些关于它的文章，进而实现了所需的功能。 接下来我们来通过一个简单的示例，一步步介绍 &#60;ngcontent&#62;
+             所涉及的内容。 Simple example 在本文中我们使用一个示例，来演示不同的方式实现内容投影。由于许多问题与Angular 中的组件生命周期相关，因此我们的主要组件将显示一个计数器，用于展示它已被实例化的次数：
+             https://www.cnblogs.com/ztwBlog/p/6368202.html
+ 
+           </div>
+         </app-article>
+
+       </section>
+      </div>
+      <!--左侧新闻明细 结束 -->
+
+      <!--右侧自定义模块 开始 -->
+      <div class="col-lg-4 col-xs-4">
+
+        <!--推荐新闻列表 开始 -->
+        <section class="right-recommend-box margin-bottom-30">
+          <h1 class="right-box-title">推荐新闻</h1>
+
+          <app-list (bindSourceRequest)="bindRecommandList($event)" [ShowPagination]=false>
+            <ng-template #itemTemplate>
+              <div>
+                <a href="#" title="">
+                  <img src="http://www.chinaedu.edu.cn/sygdtplm/201611/W020170726561303852656.jpg" border="0" width="120" height="120" alt="">
+                </a>
+                <div class="content">
+                  <a href="#" title="">
+                    <h3>推荐文章标题</h3>
+                  </a>
+                  <p>推荐文章内容................</p>
+                </div>
+              </div>
+            </ng-template>
+          </app-list>
+
+        </section>
+        <!--推荐新闻列表 结束 -->
+
+      </div>
+      <!--右侧自定义模块 结束 -->
+
+    </div>
+  </div>
+
+</div>
+<!--新闻明细页 结束 -->

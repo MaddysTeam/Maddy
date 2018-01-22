@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common';
 
-import { NewsRoutingModule } from './news.routing.module';
-import { NewsListComponent } from './news-list/news-list.component';
-import { NewsService } from './shared/news.services';
 import { SharedModule } from '@app-shared';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { NewsService } from './shared/news.services';
+import { NewsRoutingModule } from './news.routing.module';
+import { NewsListComponent } from './news-list/news-list.component';
+import { NewsDetailComponent } from 'app/news/news-detail/news-detail.component';
 
 @NgModule({
-    declarations: [NewsListComponent],
+    declarations: [NewsListComponent,NewsDetailComponent],
     imports: [
         NewsRoutingModule,
         CommonModule,

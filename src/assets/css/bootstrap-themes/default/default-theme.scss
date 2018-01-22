@@ -1,0 +1,195 @@
+@import "_variables.scss";
+$colors: ( "blue": $blue, "indigo": $indigo, "purple": $purple, "pink": $pink, "red": $red, "orange": $orange, "yellow": $yellow, "green": $green, "teal": $teal, "cyan": $cyan, "white": $white, "gray": $gray-600, "gray-dark": $gray-800, "nva-dark-color":$navbar-dark-color) !default;
+$default-font:14px/1.5 'microsoft yaHei',
+'微软雅黑',
+tahoma,
+arial;
+$default-font-size:14px;
+$margin-zero:0;
+$theme-colors: ( "primary": #0074d9, "danger": #ff4136, "gray": #eeeeee, "black":#000, "white":#fff);
+
+/*** 
+sass 方法
+***/
+
+@function color($key: "blue") {
+    @return map-get($colors, $key);
+}
+
+@function theme-color($key: "primary") {
+    @return map-get($theme-colors, $key);
+}
+
+@function gray($key: "100") {
+    @return map-get($grays, $key);
+}
+
+
+/*** 
+body 
+***/
+
+.default-theme {
+    direction: ltr;
+    margin: $margin-zero;
+    color: $color;
+    font: $default-font;
+    font-size: $default-font-size;
+    background-color: $body-color;
+    /***
+    h tag
+    ***/
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font: $default-font;
+        margin: $margin-zero;
+        color: $color;
+    }
+    h1 {
+        margin-bottom: 15px;
+    }
+    /***
+    link
+    ***/
+    a {
+        &:focus,
+        &:active {
+            outline: 0;
+            text-decoration: none;
+        }
+        &:hover {
+            color: #E02222;
+            text-decoration: none;
+        }
+    }
+    /***
+    border
+    **/
+    .border-light-gray {
+        border: 1px solid rgba(0, 0, 0, .125);
+    }
+    /***
+    leader
+    ***/
+    @mixin leader {
+        font-size: 16px;
+    }
+    /***
+    header
+    ***/
+    header {
+        margin: 0;
+        padding: 0
+    }
+    /***
+    nav
+    ***/
+    .nav {
+        @include leader;
+    }
+    /***
+    main
+    ***/
+    main {
+        margin: 0;
+        padding: 0;
+    }
+    /***
+    footer  
+    ***/
+    footer {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+// Cerulean 4.0.0
+// Bootswatch
+
+/* @mixin btn-shadow($color){
+    @include gradient-y-three-colors(lighten($color, 8%), $color, 60%, darken($color, 4%));
+  }
+  
+  $text-shadow: 0 1px 0 rgba(0, 0, 0, 0.05) !default;
+  
+  // Navbar ======================================================================
+  
+  .bg-primary {
+    @include btn-shadow($primary);
+  }
+  
+  .bg-dark {
+    @include btn-shadow($blue);
+  }
+  
+  .bg-light {
+    @include gradient-y-three-colors(lighten($gray-200, 8%), $gray-200, 60%, darken($gray-200, 2%));
+  }
+  
+  .navbar-brand,
+  .nav-link {
+    text-shadow: $text-shadow
+  }
+  
+  // Buttons =====================================================================
+  
+  .btn {
+    text-shadow: $text-shadow
+  }
+  
+  .btn-primary {
+    @include btn-shadow($primary);
+  }
+  
+  .btn-secondary {
+    @include btn-shadow($secondary);
+    color: $gray-700;
+  }
+  
+  .btn-success {
+    @include btn-shadow($success);
+  }
+  
+  .btn-info {
+    @include btn-shadow($info);
+  }
+  
+  .btn-warning {
+    @include btn-shadow($warning);
+  }
+  
+  .btn-danger {
+    @include btn-shadow($danger);
+  }
+  
+  // Typography ==================================================================
+  
+  .bg-primary,
+  .bg-success,
+  .bg-info,
+  .bg-warning,
+  .bg-danger,
+  .bg-dark {
+    h1, h2, h3, h4, h5, h6 {
+      color: $white;
+    }
+  }
+  
+  // Tables ======================================================================
+  
+  // Forms =======================================================================
+  
+  // Navs ========================================================================
+  .nav a{
+    
+  }
+  // Indicators ==================================================================
+  
+  // Progress bars ===============================================================
+  
+  // Containers ==================================================================
+  */
