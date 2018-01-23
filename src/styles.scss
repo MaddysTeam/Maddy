@@ -63,13 +63,11 @@ body {
     padding: 0;
 }
 
-
-/*** 导入主题 ***/
-
+/*** 导入主题样式 ***/
 @import "assets/css/bootstrap-themes/default/default-theme.scss";
+@import "assets/css/bootstrap-themes/blue/blue-theme.scss";
 
-/*** 导入ootstrap ***/
-
+/*** 导入bootstrap ***/
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 /***
