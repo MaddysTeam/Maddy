@@ -5,13 +5,12 @@ import { trigger } from '@angular/core/src/animation/dsl';
     selector: 'app-card',
     template: `<div class="{{theme}} {{displayAnimate}}">
                     <ng-template *ngTemplateOutlet="ContentTemplate; context:data"></ng-template>
-                </div>`,
-    styleUrls: ['./card.component.scss']
+                </div>`
 })
 
 export class CardComponent {
     @Input() data: any;
-    @Input() theme = 'scard';
+    @Input() theme = 'card';
     @Input() displayAnimate = 'animated fadeInUp' ; // this from Animate.css:https://daneden.github.io/animate.css/
     @ContentChild('contentTemplate') ContentTemplate: TemplateRef<void>;  
 }

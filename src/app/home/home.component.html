@@ -46,82 +46,70 @@
 
     <!--新闻 开始-->
     <section class="news margin-bottom-30">
-      <app-card>
-        <ng-template #contentTemplate>
-          <div class="index-box-news">
-            <div class="box-title">
-              <span class="box-title-line"></span>
-              <h3>news</h3>
-              <h2>部门
-                <strong>新闻</strong>
-              </h2>
-            </div>
-            <div class="row news-list">
-              <div class="col-lg-5 col-xs-5">
+      <div class="index-box-news">
+        <div class="box-title">
+          <span class="box-title-line"></span>
+          <h3>news</h3>
+          <h2>部门
+            <strong>新闻</strong>
+          </h2>
+        </div>
+        <div class="row news-list">
+          <div class="col-lg-5 col-xs-5">
 
-                <app-card>
-                  <ng-template #contentTemplate>
-                    <div class="news-first-box animate-box fadeInLeft animated-fast" data-animate-effect="fadeInLeft">
-                      <img src="http://www.ysemm.cn/templets/newysemmcn/images/news-first-bg.jpg" >
-                      <div class="news-first-text">
-                        <a target="_blank"  [routerLink]="['/news/detail']" >
-                          <h4>这里是主要新闻</h4>
-                        </a>
-                        <p>主要新闻内容。</p>
-                      </div>
-                    </div>
-                  </ng-template>
-                </app-card>
-
-              </div>
-              <div class="col-lg-7 col-xs-7">
-
-                <app-list (bindSourceRequest)="bindList($event)" [ShowPagination]=false>
-                  <ng-template #itemTemplate>
-                    <div class="col-lg-2 col-xs-2">
-                      <span>
-                        <strong>2017-07</strong>
-                      </span>
-                    </div>
-                    <div class="col-lg-10 col-xs-10">
-                      <a href="/news/industryinformations/article_20170704_279.html" title="房企的PPP发展模式">
-                        <h4>新闻标题1</h4>
-                      </a>
-                      <p>新闻内容</p>
-                      <div class="row-tags">
-                        <a href="#">底部链接</a>
-                      </div>
-                    </div>
-                  </ng-template>
-                </app-list>
-
+            <div class="news-first-box animate-box fadeInLeft animated-fast" data-animate-effect="fadeInLeft">
+              <img src="http://www.ysemm.cn/templets/newysemmcn/images/news-first-bg.jpg" >
+              <div class="news-first-text">
+                <a target="_blank"  [routerLink]="['/news/detail']" >
+                  <h4>这里是主要新闻</h4>
+                </a>
+                <p>主要新闻内容。</p>
               </div>
             </div>
+
           </div>
-        </ng-template>
-      </app-card>
+          <div class="col-lg-7 col-xs-7">
+
+            <app-list (bindSourceRequest)="bindList($event)" [ShowPagination]=false>
+              <ng-template #itemTemplate>
+                <div class="col-lg-2 col-xs-2">
+                  <span>
+                    <strong>2017-07</strong>
+                  </span>
+                </div>
+                <div class="col-lg-10 col-xs-10">
+                  <a href="/news/industryinformations/article_20170704_279.html" title="房企的PPP发展模式">
+                    <h4>新闻标题1</h4>
+                  </a>
+                  <p>新闻内容</p>
+                  <div class="row-tags">
+                    <a href="#">底部链接</a>
+                  </div>
+                </div>
+              </ng-template>
+            </app-list>
+
+          </div>
+        </div>
+      </div>
     </section>
     <!--新闻 结束-->
 
     <!--项目展示 开始-->
     <section class="projects margin-bottom-30">
 
-      <app-card theme="scard" [data]="item" displayAnimate="animated fadeIn">
-        <ng-template #contentTemplate>
-          <div class="box-title">
-            <span class="box-title-line"></span>
-            <h3>projects</h3>
-            <h2>项目
-              <strong>展示</strong>
-            </h2>
-          </div>
-        </ng-template>
-      </app-card>
+      <div class="box-title">
+        <span class="box-title-line"></span>
+        <h3>projects</h3>
+        <h2>项目
+          <strong>展示</strong>
+        </h2>
+      </div>
 
       <div class="row">
           <div class="col-md-4 col-lg-3 col-sm-6 margin-bottom-30  block btn06" *ngFor="let item of [4,5,6,7,8,9,10,11]; index as i">
   
-            <app-card theme="scard" [data]="item" displayAnimate="animated fadeIn">
+            <app-card [data]="item" displayAnimate="animated fadeIn">
               <ng-template #contentTemplate>
                 <div class="scard-body">
                   <a href="#">

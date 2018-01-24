@@ -63,13 +63,6 @@ body {
     padding: 0;
 }
 
-/*** 导入主题样式 ***/
-@import "assets/css/bootstrap-themes/default/default-theme.scss";
-@import "assets/css/bootstrap-themes/blue/blue-theme.scss";
-
-/*** 导入bootstrap ***/
-@import "../node_modules/bootstrap/scss/bootstrap";
-
 /***
 box tools
 ***/
@@ -278,3 +271,22 @@ box tools
 .clear-border {
     border: none !important;
 }
+
+
+/*** 导入bootstrap functions 和 mixins ***/
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/mixins";
+
+/*** 导入项目主题样式 ***/
+@import "assets/css/themes/default/default-theme.scss";
+@import "assets/css/themes/blue/blue-theme.scss";
+
+/*** 导入bootstrap variables 注意这里不要放在自定义主题上方，其变量会被覆盖 ***/
+@import "node_modules/bootstrap/scss/variables";
+
+/*** 导入bootstrap 可选项 ***/
+// @import "node_modules/bootstrap/scss/reboot";
+// @import "node_modules/bootstrap/scss/type";
+// @import "node_modules/bootstrap/scss/images";
+// @import "node_modules/bootstrap/scss/code";
+// @import "node_modules/bootstrap/scss/grid";

@@ -1,29 +1,20 @@
 .default-theme {
-    @import "assets/css/bootstrap-themes/default/_variables.scss";
-    $colors: ( "blue": $blue, "indigo": $indigo, "purple": $purple, "pink": $pink, "red": $red, "orange": $orange, "yellow": $yellow, "green": $green, "teal": $teal, "cyan": $cyan, "white": $white, "gray": $gray-600, "gray-dark": $gray-800, "nva-dark-color":$navbar-dark-color) !default;
+    @import "variables.scss";
+    //$colors: ( "blue": $blue, "indigo": $indigo, "purple": $purple, "pink": $pink, "red": $red, "orange": $orange, "yellow": $yellow, "green": $green, "teal": $teal, "cyan": $cyan, "white": $white, "gray": $gray-600, "gray-dark": $gray-800, "nva-dark-color":$navbar-dark-color) !default;
     $default-font:14px/1.5 'microsoft yaHei',
     '微软雅黑',
     tahoma,
     arial;
     $default-font-size:14px;
     $margin-zero:0;
-    $theme-colors: ( "primary": #0074d9, "danger": #ff4136, "gray": #eeeeee, "black":#000, "white":#fff);
-
+    
     /*** 
     sass 方法
     ***/
 
-    @function color($key: "blue") {
-        @return map-get($colors, $key);
-    }
-
-    @function theme-color($key: "primary") {
-        @return map-get($theme-colors, $key);
-    }
-
-    @function gray($key: "100") {
-        @return map-get($grays, $key);
-    }
+    // @function color($key: "blue") {
+    //     @return map-get($colors, $key);
+    // }
 
     @mixin btn-shadow($col){
         @include gradient-y-three-colors(lighten($col, 8%), $col, 60%, darken($col, 4%));
@@ -92,17 +83,32 @@
             border-bottom: 1px solid red;
         }
         .dropdown-menu .dropdown-item {
-            color: $navbar-link-color;
             font-size: 14px;
+            color: $navbar-link-color;
             &:hover {
                 color: $navbar-hover-color;
+                background-color: $blue;
             }
         }
     }
 
-      // Buttons =====================================================================
-      $text-shadow: 0 1px 0 rgba(0, 0, 0, 0.05) !default;
-      .btn {
-        text-shadow: $text-shadow
-      }
+    // Buttons =====================================================================
+    .btn {
+        text-shadow: $text-shadow;
+    }
+    .btn-danger{
+        background-color: $yellow;
+    }
+    .btn-info{
+        
+    }
+     
+    // alert =====================================================================
+    // table =====================================================================
+    // form  =====================================================================
+    // images  =====================================================================
+    // popover  =====================================================================
+    // dropdown  =====================================================================
+    // card  =====================================================================
+    // ...  =====================================================================
 }
