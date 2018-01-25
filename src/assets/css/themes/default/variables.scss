@@ -1,7 +1,7 @@
 // 这里放主题样式变量
 
 //
-// Color system
+// 调色板
 //
 
 $white:    #fff !default;
@@ -27,6 +27,8 @@ $green:   #73A839 !default;
 $teal:    #20c997 !default;
 $cyan:    #2FA4E7 !default;
 
+
+//  
 $primary:       $cyan !default;
 $secondary:     $gray-200 !default;
 $success:       $green !default;
@@ -43,8 +45,8 @@ $body-color:    $white !default;
 $color:         $gray-800 ! default;
 
 // Fonts
-
 $headings-color:         $cyan !default;
+$font-primary-color: $black !default;
 $text-shadow: 0 1px 0 rgba(0, 0, 0, 0.05) !default;
 // Dropdowns
 

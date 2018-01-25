@@ -18,6 +18,8 @@ import { ModalComponent } from 'app/shared/plugins/modal/modal.component';
 import { ModalDirective } from 'app/shared/plugins/modal/modal.directive';
 import { LoginComponent } from 'app/shared/plugins/forms/login/login.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { GotoTopDirective } from './directives/goto-top.directive';
+import { PositionRefreshDirective } from './directives/position-refresh.directive';
 
 //  module
 const MODULE = [
@@ -45,7 +47,9 @@ const DE = [
     ListComponent,
     ModalComponent,
     ModalDirective,
-    LoginComponent
+    LoginComponent,
+    GotoTopDirective,
+    PositionRefreshDirective
 ];
 
 @NgModule({

@@ -63,6 +63,10 @@ body {
     padding: 0;
 }
 
+.none {
+    display: none !important;
+}
+
 /***
 box tools
 ***/
@@ -271,7 +275,6 @@ box tools
 .clear-border {
     border: none !important;
 }
-
 
 /*** 导入bootstrap functions 和 mixins ***/
 @import "node_modules/bootstrap/scss/functions";

@@ -25,6 +25,13 @@
     $margin-zero: 0;
 
     // gloable ======================================================================
+
+    .primary {
+        background: $primary;
+        color: $font-primary-color;
+        border: 1px solid #eee;
+      }
+
     direction: ltr;
     margin: $margin-zero;
     color: $color;
@@ -106,6 +113,9 @@
         background-color: $cyan;
         
         @include btn-shadow($cyan);
+    } 
+    .fixed-btn {
+        @extend .primary;
     } 
     
     // alert =====================================================================

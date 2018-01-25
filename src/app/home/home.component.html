@@ -4,7 +4,7 @@
   <div class="carousel margin-bottom-30">
     <app-carousel [isShowControl]="true" (prevRequest)="carouselPrev($event)" (bindSourceRequest)="bindCarousel($event)"></app-carousel>
   </div>
-  
+
 
   <div class="home-main margin-bottom-30">
 
@@ -58,9 +58,9 @@
           <div class="col-lg-5 col-xs-5">
 
             <div class="news-first-box animate-box fadeInLeft animated-fast" data-animate-effect="fadeInLeft">
-              <img src="http://www.ysemm.cn/templets/newysemmcn/images/news-first-bg.jpg" >
+              <img src="http://www.ysemm.cn/templets/newysemmcn/images/news-first-bg.jpg">
               <div class="news-first-text">
-                <a target="_blank"  [routerLink]="['/news/detail']" >
+                <a target="_blank" [routerLink]="['/news/detail']">
                   <h4>这里是主要新闻</h4>
                 </a>
                 <p>主要新闻内容。</p>
@@ -107,70 +107,77 @@
       </div>
 
       <div class="row">
-          <div class="col-md-4 col-lg-3 col-sm-6 margin-bottom-30  block btn06" *ngFor="let item of [4,5,6,7,8,9,10,11]; index as i">
-  
-            <app-card [data]="item" displayAnimate="animated fadeIn">
-              <ng-template #contentTemplate>
-                <div class="scard-body">
-                  <a href="#">
-                    <img class="card-img-top" src="https://htmlstream.com/preview/unify-v2.4/assets/img-temp/600x295/img{{item}}.jpg">
-                  </a>
-                  <div class="card-title"></div>
-                  <p class="card-text">
-                    <strong>项目名称</strong>
-                  </p>
-                  <p>
-                    项目简介....
-                  </p>
-                  <div>
-                    <a href="#" class="btn btn-md btn-danger">查看详情</a>
-                  </div>
-                  <p>
-                  </p>
+        <div class="col-md-4 col-lg-3 col-sm-6 margin-bottom-30  block btn06" *ngFor="let item of [4,5,6,7,8,9,10,11]; index as i">
+
+          <app-card [data]="item" displayAnimate="animated fadeIn">
+            <ng-template #contentTemplate>
+              <div class="scard-body">
+                <a href="#">
+                  <img class="card-img-top" src="https://htmlstream.com/preview/unify-v2.4/assets/img-temp/600x295/img{{item}}.jpg">
+                </a>
+                <div class="card-title"></div>
+                <p class="card-text">
+                  <strong>项目名称</strong>
+                </p>
+                <p>
+                  项目简介....
+                </p>
+                <div>
+                  <a href="#" class="btn btn-md btn-danger">查看详情</a>
                 </div>
-              </ng-template>
-            </app-card>
-            
-          </div>
+                <p>
+                </p>
+              </div>
+            </ng-template>
+          </app-card>
+
         </div>
+      </div>
 
     </section>
     <!--项目展示 结束-->
 
     <section class="users margin-bottom-30">
-       
-        <app-card theme="scard" [data]="item" displayAnimate="animated fadeIn">
+
+      <app-card theme="scard" [data]="item" displayAnimate="animated fadeIn">
+        <ng-template #contentTemplate>
+          <div class="box-title">
+            <span class="box-title-line"></span>
+            <h3>Employee</h3>
+            <h2>部门
+              <strong>大佬</strong>
+            </h2>
+          </div>
+        </ng-template>
+      </app-card>
+
+      <div class="row">
+        <div class="col-md-3 col-lg-3 col-sm-6 margin-bottom-30  block btn06" *ngFor="let item of [1,2,3,4]; index as i">
+
+          <app-card>
             <ng-template #contentTemplate>
-              <div class="box-title">
-                <span class="box-title-line"></span>
-                <h3>Employee</h3>
-                <h2>部门
-                  <strong>大佬</strong>
-                </h2>
+              <div class="user">
+                <div class="user-header margin-bottom-30">
+                  <!-- <img class="card-img-top" src="http://snowcoal.com/image/portrait/default_header.jpg"> -->
+                </div>
+                <div class="user-name text-center font-size-16">
+                  小伙子
+                </div>
               </div>
             </ng-template>
           </app-card>
-        
-          <div class="row">
-              <div class="col-md-3 col-lg-3 col-sm-6 margin-bottom-30  block btn06" *ngFor="let item of [1,2,3,4]; index as i">
 
-                  <app-card>
-                     <ng-template #contentTemplate>
-                       <div class="user">
-                          <div class="user-header margin-bottom-30">
-                              <!-- <img class="card-img-top" src="http://snowcoal.com/image/portrait/default_header.jpg"> -->
-                          </div>
-                          <div class="user-name text-center font-size-16">
-                              小伙子
-                          </div>
-                       </div>
-                     </ng-template>
-                  </app-card>
-     
-               </div>
-          </div>
-        
+        </div>
+      </div>
+
     </section>
 
   </div>
-  <!-- home demo end -->
+</div>
+<!-- home demo end -->
+
+<!-- 回到顶部 start -->
+<div class="fixed-btn" appGotoTop>
+  回到顶部
+</div>
+<!-- 回到顶部 end -->

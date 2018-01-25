@@ -44,6 +44,7 @@ $color:         $cyan !default;
 // Fonts
 
 $headings-color:         $cyan !default;
+$font-primary-color: $white !default;
 
 // Dropdowns
 
@@ -53,7 +54,7 @@ $dropdown-link-hover-bg:         $primary !default;
 
 // Navbar
 
-$navbar-dark-color:                 rgba($white,.8) !default;
-$navbar-hover-color:               $white !default;
-$navbar-link-color:                 $cyan !default;
-$navbar-link-hover-color:           $blue !default;
+$navbar-dark-color: rgba($white,.8) !default;
+$navbar-hover-color: $white !default;
+$navbar-link-color: $cyan !default;
+$navbar-link-hover-color: $blue !default;
