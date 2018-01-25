@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
     private isValidateError = false;
     private loginModel: LoginModel;
 
-    formGroup: FormGroup
+    formGroup: FormGroup;
 
     constructor(private service: LoginControlService) { }
 
@@ -47,7 +47,7 @@ export class LoginComponent implements OnInit {
         );
     }
      
-    //登录方法
+    // 登录方法
     login() {
         this.valid();
         if (!this.isValidateError)
