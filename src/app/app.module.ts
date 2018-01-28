@@ -8,13 +8,13 @@
  5. 不要省略分号
  6. 类型用 PascalCase, 其他用 camelCase
  7. 一行不要过长. 基本上原则是永远不应该需要用鼠标滚动才能看全
- 7. 类型名使用 PascalCase
- 7. 接口名前不要加 I
- 7. 枚举值使用 PascalCase
- 7. 函数名使用 camelCase
- 7. 属性和局部变量名使用 camelCase
- 7. 私有属性名不要使用 _ 前缀
- 7. 命名时尽可能地使用全名（而非缩写）
+ 8. 类型名使用 PascalCase
+ 9. 接口名前不要加 I
+ 10. 枚举值使用 PascalCase
+ 11. 函数名使用 camelCase
+ 12. 属性和局部变量名使用 camelCase
+ 13. 私有属性名不要使用 _ 前缀
+ 14. 命名时尽可能地使用全名（而非缩写）
 
  */
 
@@ -33,6 +33,7 @@ import { CoreModule } from './core/core.module';
 import { UsersModule } from './users/users.module';
 import { HomeModule } from './home/home.module';
 import { NewsModule } from './news/news.module';
+import { SpecficaitonModule } from './specfication/specfication.module';
 
 @NgModule({
     declarations: [
@@ -47,7 +48,8 @@ import { NewsModule } from './news/news.module';
         CoreModule,
         UsersModule,
         HomeModule,
-        NewsModule
+        NewsModule,
+        SpecficaitonModule
     ],
     providers: [],
     bootstrap: [AppComponent],

@@ -1,0 +1,46 @@
+.specfication {
+    .list-news{min-width: 500px;}
+    /*列表*/
+    .list-item {
+        position: relative;
+        height: 159px;
+        border-bottom: 1px solid #888;
+    }
+    .list-item .item-info {
+        /* margin-left: 220px; */
+        display: inline-block;
+        width: 73.6%;
+        padding-left: 10px;
+    }
+    .list-item .item-info h2 {
+        font-size: 16px;
+        line-height: 22px;
+        height: 30px;
+        padding-bottom: 10px;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    .list-item .item-info p {
+        line-height: 24px;
+        font-size: 14px;
+        height: 72px;
+        overflow: hidden;
+        letter-spacing: 0px;
+        color: #777;
+    }
+    .list-item .item-info span {
+        color: #9d9d9d;
+        padding-top: 6px;
+        font-size: 14px;
+        padding-right: 30px;
+        letter-spacing: 1px;
+    }
+    .list-item .item-info span.news-view {
+        padding-left: 22px;
+        float: left;
+    }
+    .list-item .item-info span.news-date {
+        padding-left: 20px;
+        float: left;
+    }
+}

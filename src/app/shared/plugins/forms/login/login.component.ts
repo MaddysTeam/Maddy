@@ -6,7 +6,7 @@ import {
 import { isNullOrUndefined } from "util";
 
 import { LoginControlService } from "./login.service";
-import { LoginModel } from './login.model'
+import { LoginModel } from './login.model';
 
 @Component({
     templateUrl: './login.component.html',
@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
     constructor(private service: LoginControlService) { }
 
     ngOnInit(): void {
-        var options = { name: this.name, password: this.password };
+        const options = { name: this.name, password: this.password };
         this.formGroup = this.service.toFormGroup(
             new LoginModel(options),
             this.nameValidator,

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core'
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { SharedModule } from '@app-shared';
@@ -9,7 +9,7 @@ import { NewsListComponent } from './news-list/news-list.component';
 import { NewsDetailComponent } from 'app/news/news-detail/news-detail.component';
 
 @NgModule({
-    declarations: [NewsListComponent,NewsDetailComponent],
+    declarations: [NewsListComponent, NewsDetailComponent],
     imports: [
         NewsRoutingModule,
         CommonModule,

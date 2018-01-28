@@ -1,4 +1,4 @@
-// 这里放主题样式变量
+// 这里放主题样式变量,注意用双斜线注释
 
 //
 // Color system
@@ -14,6 +14,7 @@ $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black:    #000 !default;
+$light-blue: rgb(222, 235, 248) !default;
 
 $blue:    #033C73 !default;
 $indigo:  #6610f2 !default;
@@ -55,6 +56,13 @@ $dropdown-link-hover-bg:         $primary !default;
 // Navbar
 
 $navbar-dark-color: rgba($white,.8) !default;
-$navbar-hover-color: $white !default;
+$navbar-hover-color: $blue !default;
 $navbar-link-color: $cyan !default;
 $navbar-link-hover-color: $blue !default;
+$navbar-dropdown-hover-color: $light-blue !default;
+
+// List group
+$list-item-background-color: $light-blue !default;
+
+// Buttons
+$btn-background-color: $cyan !default;

@@ -29,37 +29,63 @@ import {
         border:0px;
         padding:0px;
     }
-    .list-group-item:hover{
-        background-color:#FFEBCD;
-    }
     `]
 })
 
 export class ListComponent implements OnInit {
 
-    // 列表数据
+    /**
+     * 列表数据
+     * @memberof ListComponent
+     */
     data: Array<any>;
 
-    // 列表模板
+    /**
+     * 列表模板
+     * @memberof ListComponent
+     */
     @ContentChild('itemTemplate')
     itemTemplate: TemplateRef<any>;
 
-    // 分页事件
+    /**
+     * 输入分页事件
+     * @memberof ListComponent
+     */
     @Input() pageEvent: PageEvent = {
         pageSize: 5,
         current: 0,
         total: 0
     };
+
+    /**
+     * 是否显示分页
+     * @memberof ListComponent
+     */
     @Input() ShowPagination = true;
 
+    /**
+     * 是否使用分页
+     *  @memberof ListComponent
+     */
     @Input() IsUsePagination = true;
 
-    // 数据绑定请求
+    /**
+     * 数据绑定请求
+     * @memberof ListComponent
+     */
     @Output()
     bindSourceRequest: EventEmitter<ListComponent>;
 
+    /**
+     * 行数据绑定事件
+     * @memberof ListComponent
+     */
     rowDataBindingRequest: EventEmitter<any>;
 
+    /**
+     * 构造函数，绑定事件
+     * @memberof ListComponent
+     */
     constructor() {
         this.bindSourceRequest = new EventEmitter();
         this.rowDataBindingRequest = new EventEmitter();
@@ -71,12 +97,21 @@ export class ListComponent implements OnInit {
         }
     }
 
-    // 分页事件触发
+    /**
+     * 分页事件触发
+     * 
+     * @memberof ListComponent
+     */
     pageChange() {
         this.bindSourceRequest.emit(this);
     }
 
-    // 行绑定事件
+    /**
+     * 行绑定事件
+     * 
+     * @param {any} item 
+     * @memberof ListComponent
+     */
     rowBinding(item) {
         if (this.rowDataBindingRequest) {
             this.rowDataBindingRequest.emit(
@@ -89,7 +124,12 @@ export class ListComponent implements OnInit {
 
 }
 
-// 分页接口
+/**
+ * 分页事件
+ * 
+ * @export
+ * @interface PageEvent
+ */
 export interface PageEvent {
     total: number;
     pageSize: number;

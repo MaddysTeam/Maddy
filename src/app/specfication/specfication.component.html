@@ -1,0 +1,37 @@
+<!--语言书写规则 开始 -->
+<div class="specfication">
+
+  <!--语言书写规则头部 开始 -->
+  <div class="specfication-header"></div>
+  <!--语言书写规则头部 结束 -->
+
+  <!--语言书写规则主体 开始 -->
+  <div class="specfication-main margin-bottom-30">
+
+    <section class="specfication-list">
+      <app-list (bindSourceRequest)="bindList($event)" [ShowPagination]=false>
+          <ng-template #itemTemplate let-spec="spec" >
+              <div class="list-item animated fadeIn">
+                    <!-- <a class="list-item-image">
+                      <fa name="view"></fa>
+                    </a> -->
+                  <div class="item-info">
+                    <h3>{{spec.title}}</h3>
+                    <p></p>
+                    <p [innerHTML]="spec.content | bypassSecurityTrustHtml">
+                    </p>
+                    <p><img src="{{spec.imageUrl}}" /></p>
+                    <p>
+                      {{spec.code}}
+                    </p>
+                  </div>
+                </div>
+          </ng-template>
+      </app-list>
+    </section>
+
+  </div>
+  <!--语言书写规则主体 开始 -->
+
+</div>
+<!--语言书写规则 结束 -->

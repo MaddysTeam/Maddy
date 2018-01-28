@@ -58,18 +58,76 @@ CSS 注意事项
 
 /*** Global ***/
 
+$default-font: 14px/1.5 'microsoft yaHei',
+'微软雅黑',
+tahoma,
+arial;
 body {
+    margin: 0;
+    padding: 0;
+    font: $default-font;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
     padding: 0;
 }
 
-.none {
-    display: none !important;
+h1 {
+    font-size: 22px;
 }
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h4 {
+    font-size: 16px;
+}   
+
+a {
+    &:focus,
+    &:active {
+        outline: 0;
+        text-decoration: none;
+    }
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+header {
+    margin: 0;
+    padding: 0
+}
+
+main {
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    margin: 0;
+    padding: 0;
+}
+
 
 /***
 box tools
 ***/
+
+.none {
+    display: none !important;
+}
 
 .no-padding {
     padding: 0 !important;
@@ -276,18 +334,23 @@ box tools
     border: none !important;
 }
 
+
 /*** 导入bootstrap functions 和 mixins ***/
+
 @import "node_modules/bootstrap/scss/functions";
 @import "node_modules/bootstrap/scss/mixins";
 
 /*** 导入项目主题样式 ***/
+
 @import "assets/css/themes/default/default-theme.scss";
 @import "assets/css/themes/blue/blue-theme.scss";
 
 /*** 导入bootstrap variables 注意这里不要放在自定义主题上方，其变量会被覆盖 ***/
+
 @import "node_modules/bootstrap/scss/variables";
 
-/*** 导入bootstrap 可选项 ***/
+/*** 导入bootstrap 可选项 如使用去除注释即可 ***/
+
 // @import "node_modules/bootstrap/scss/reboot";
 // @import "node_modules/bootstrap/scss/type";
 // @import "node_modules/bootstrap/scss/images";

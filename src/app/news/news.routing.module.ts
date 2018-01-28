@@ -13,6 +13,4 @@ const newsRoutes: Routes = [
     exports: [RouterModule]
 })
 
-export class NewsRoutingModule {
-
-}
+export class NewsRoutingModule {}

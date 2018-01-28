@@ -1,0 +1,99 @@
+ /* ssas 方法 */
+    @function color($key: "blue") {
+        @return map-get($colors, $key);
+    }
+    @function theme-color($key: "primary") {
+        @return map-get($theme-colors, $key);
+    }
+    @function gray($key: "100") {
+        @return map-get($grays, $key);
+    }
+    @mixin btn-shadow($col) {
+        @include gradient-y-three-colors(lighten($col, 8%), $col, 60%, darken($col, 4%));
+    }
+
+    /*
+      primary ===================================================================== 
+    */
+    .primary {
+        background: $primary;
+        color: $font-primary-color;
+        border: 1px solid #eee;
+    }
+    /*
+      Navbar ===================================================================== 
+    */
+    nav,
+    .nav {
+        font-size: 14px;
+        color: $dropdown-link-color;
+        .nav-item .dropdown-menu {
+            margin: 0;
+        }
+        .nav-item:hover .dropdown-menu {
+            display: block;
+        }
+        .nav-link {
+            color: $navbar-link-color;
+            &:hover {
+                color: $navbar-link-hover-color;
+            }
+        }
+        .nav-link.active {
+            border-bottom: 1px solid red;
+        }
+        .dropdown-menu .dropdown-item {
+            color: $navbar-link-color;
+            font-size: 14px;
+            &:hover {
+                color: $navbar-hover-color;
+                background-color: $navbar-dropdown-hover-color;
+            }
+        }
+    }
+    /*
+      Buttons ===================================================================== 
+    */
+    $text-shadow: 0 1px 0 rgba(0, 0, 0, 0.05) !default;
+    .btn {
+        text-shadow: $text-shadow;
+    }
+    .btn-danger {
+        border: 0px;
+        background-color: $btn-background-color;
+        @include btn-shadow($btn-background-color);
+    }
+    .fixed-btn {
+        @extend .primary;
+    }
+    /*
+      alert ===================================================================== 
+    */
+    /*
+     list ===================================================================== 
+    */
+    .list-group-item{
+        transition: all 1s;
+        -moz-transition: all 1s;	/* Firefox 4 */
+        -webkit-transition: all 1s;	/* Safari 和 Chrome */
+        -o-transition: all 1s;	/* Opera */
+    }
+    .list-group-item:hover{
+        background-color:$list-item-background-color;
+    }
+    /*
+      table ===================================================================== 
+    */
+    /*
+      form ===================================================================== 
+    */
+    /*
+      images ===================================================================== 
+    */
+    /*
+      dropdown ===================================================================== 
+    */
+    /*
+      card ===================================================================== 
+    */
+    
